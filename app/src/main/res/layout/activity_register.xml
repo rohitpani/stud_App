@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.register">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Create an account"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="#0F2851"
+                android:layout_marginTop="15dp"
+                android:lineHeight="28dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dashed_line"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="27.61dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="19dp">
+                    <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="21dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Full Name"
+                    android:textSize="14dp"
+                    android:lineHeight="21dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/light_black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:lineHeight="21dp"
+                    android:textColor="@color/red"
+                    android:layout_marginLeft="3dp"/>
+            </LinearLayout>
+                    <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:background="@drawable/views_bg"
+                >
+                
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:background="#F9F7FF"
+                    android:drawableLeft="@drawable/username"
+                    android:layout_gravity="center"
+                    android:drawablePadding="7dp"
+                    android:paddingLeft="15dp"
+                    android:textSize="14dp"
+                    android:hint="Enter your name"/>
+                
+            </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="27.61dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="19dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Mobile Number"
+                        android:textSize="14dp"
+                        android:lineHeight="21dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/light_black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:lineHeight="21dp"
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="3dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/views_bg">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="21dp"
+                        android:background="#F9F7FF"
+                        android:drawableLeft="@drawable/phone"
+                        android:layout_gravity="center"
+                        android:drawablePadding="7dp"
+                        android:paddingLeft="15dp"
+                        android:textSize="14dp"
+                        android:inputType="phone"
+                        android:hint="Enter your Mobile Number"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="27.61dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="19dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Email Id"
+                        android:textSize="14dp"
+                        android:lineHeight="21dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/light_black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:lineHeight="21dp"
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="3dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/views_bg">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="21dp"
+                        android:background="#F9F7FF"
+                        android:drawableLeft="@drawable/mail"
+                        android:layout_gravity="center"
+                        android:drawablePadding="7dp"
+                        android:paddingLeft="15dp"
+                        android:textSize="14dp"
+                        android:hint="Enter your Email"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="27.61dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="19dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Password"
+                        android:textSize="14dp"
+                        android:lineHeight="21dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/light_black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:lineHeight="21dp"
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="3dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/views_bg">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="21dp"
+                        android:background="#F9F7FF"
+                        android:drawableLeft="@drawable/username"
+                        android:layout_gravity="center"
+                        android:drawablePadding="7dp"
+                        android:paddingLeft="15dp"
+                        android:textSize="14dp"
+                        android:hint="Enter Password"
+                        android:paddingRight="15dp"
+                        android:drawableRight="@drawable/view_off" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="28.61dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="19dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Connect your Social accounts"
+                        android:textSize="14dp"
+                        android:lineHeight="21dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/light_black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:lineHeight="21dp"
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="3dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="45dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/card_border"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="5dp"
+                                android:src="@drawable/instagram" />
+
+                        </LinearLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="310dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="@drawable/views_bg">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:lineHeight="21dp"
+                                android:text="Instagram Handle"
+                                android:textColor="#898989"
+                                android:textSize="14dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.34"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            />
+                        
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="45dp"
+                            android:layout_height="43dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/card_border">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="5dp"
+                                android:src="@drawable/youtube"/>
+
+                        </LinearLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="310dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="@drawable/views_bg">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:lineHeight="21dp"
+                                android:text="YouTube Handle"
+                                android:textColor="#898989"
+                                android:textSize="14dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.34"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="28.61dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="19dp">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkbox"
+                    android:checked="true"
+                    android:buttonTint="#585CE5"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/condition"
+                    android:textSize="12dp"
+                    android:lineHeight="18dp"
+                    android:textColor="#5A5A5A"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_height="36dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="18dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:background="@drawable/button_bg"
+                    android:drawableRight="@drawable/arrow_long_right"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Sign Up"
+                    android:textAllCaps="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="21dp"
+                        android:text="Already a Member?"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="21dp"
+                        android:text="Login"
+                        android:textColor="#552FFF"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginLeft="5dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

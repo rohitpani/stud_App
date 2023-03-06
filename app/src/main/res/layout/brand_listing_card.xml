@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="false"
+    app:cardElevation="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="75dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginLeft="22dp"
+                android:elevation="10dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginBottom="30dp"
+                app:cardCornerRadius="14dp">
+
+                <ImageView
+                    android:layout_width="59dp"
+                    android:layout_height="57dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/brand_list_card_logo"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pizza_logo" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/brand_list_card_logo"
+                android:layout_toLeftOf="@+id/forward_arrow"
+                android:layout_marginTop="28dp"
+                android:layout_marginLeft="19dp"
+                android:layout_marginRight="65dp"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:id="@+id/brand_name"
+                    android:textSize="16dp"
+                    android:lineHeight="24dp"
+                    android:textAllCaps="true"
+                    android:textColor="#1E1E1E"
+                    android:text="PIZZA EXPRESS"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:background="@drawable/active_campg_bg">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Active Campaigns : "
+                        android:lineHeight="18dp"
+                        android:textColor="#5E6366"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:id="@+id/active_camp_no"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="3"
+                        android:lineHeight="18dp"
+                        android:textColor="#552FFF"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/forward_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/move_forward_arrow" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

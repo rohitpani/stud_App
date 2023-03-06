@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="136dp"
+    android:layout_height="wrap_content"
+    android:elevation="5dp"
+    android:background="@drawable/shadow"
+    app:cardCornerRadius="12dp"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/brand_img"
+            android:layout_width="65dp"
+            android:layout_height="55dp"
+            android:src="@drawable/air_bnb"
+            android:layout_margin="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/active_camp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:id="@+id/active_camp"
+            android:fontFamily="@font/poppins_medium"
+            android:lineHeight="15.07dp"
+            android:text="Campaigns Active : 3"
+            android:textColor="#5E6366"
+            android:textSize="10.05dp"
+            android:gravity="center"
+            android:background="@drawable/views_bg"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/brand_img"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

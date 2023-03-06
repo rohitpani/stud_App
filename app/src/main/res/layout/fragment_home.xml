@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/banner"
+                android:scaleType="fitXY"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:id="@+id/featured_campaign"
+                            android:textSize="16dp"
+                            android:lineHeight="24dp"
+                            android:textColor="#1E1E1E"
+                            android:text="Featured Campaigns"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:layout_marginTop="23.09dp"
+                            android:layout_marginLeft="15.15dp"/>
+
+                        <ImageView
+                            android:layout_width="133.74dp"
+                            android:layout_height="2.55dp"
+                            android:src="@drawable/dashed_line"
+                            android:layout_marginLeft="14.78dp"
+                            android:layout_marginTop="3.04dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:lineHeight="18dp"
+                        android:text="@string/View_all"
+                        android:textColor="#552FFF"
+                        android:textSize="12dp"
+                        android:layout_marginRight="12.34dp"/>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="8.5dp"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/featured_campaign_recv_home"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:id="@+id/featured_campaign"
+                            android:textSize="16dp"
+                            android:lineHeight="24dp"
+                            android:textColor="#1E1E1E"
+                            android:text="Top Brands"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:layout_marginTop="23.09dp"
+                            android:layout_marginLeft="15.15dp"/>
+
+                        <ImageView
+                            android:layout_width="133.74dp"
+                            android:layout_height="2.55dp"
+                            android:src="@drawable/dashed_line"
+                            android:layout_marginLeft="14.78dp"
+                            android:layout_marginTop="3.04dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:lineHeight="18dp"
+                        android:text="@string/View_all"
+                        android:textColor="#552FFF"
+                        android:textSize="12dp"
+                        android:layout_marginRight="12.34dp"/>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/brands_recv_home"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:id="@+id/featured_campaign"
+                            android:textSize="16dp"
+                            android:lineHeight="24dp"
+                            android:textColor="#1E1E1E"
+                            android:text="Browse by Category"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:layout_marginTop="23.09dp"
+                            android:layout_marginLeft="15.15dp"/>
+
+                        <ImageView
+                            android:layout_width="133.74dp"
+                            android:layout_height="2.55dp"
+                            android:src="@drawable/dashed_line"
+                            android:layout_marginLeft="14.78dp"
+                            android:layout_marginTop="3.04dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:lineHeight="18dp"
+                        android:text="@string/View_all"
+                        android:textColor="#552FFF"
+                        android:textSize="12dp"
+                        android:layout_marginRight="12.34dp"/>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="8.5dp"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cat_recv_home"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/banner2"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:id="@+id/featured_campaign"
+                            android:textSize="16dp"
+                            android:lineHeight="24dp"
+                            android:textColor="#1E1E1E"
+                            android:text="Curated for you"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:layout_marginTop="23.09dp"
+                            android:layout_marginLeft="15.15dp"/>
+
+                        <ImageView
+                            android:layout_width="133.74dp"
+                            android:layout_height="2.55dp"
+                            android:src="@drawable/dashed_line"
+                            android:layout_marginLeft="14.78dp"
+                            android:layout_marginTop="3.04dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:lineHeight="18dp"
+                        android:text="@string/View_all"
+                        android:textColor="#552FFF"
+                        android:textSize="12dp"
+                        android:layout_marginRight="12.34dp"/>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="8.5dp"
+                    android:layout_marginBottom="100dp"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/curated_recv_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+    </ScrollView>
+
+</FrameLayout>

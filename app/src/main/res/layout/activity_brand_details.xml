@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Brand_Details">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.15dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/backward_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:id="@+id/featured_campaign"
+                    android:textSize="16dp"
+                    android:lineHeight="24dp"
+                    android:textColor="#1E1E1E"
+                    android:text="About the Brand"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginTop="23.09dp"
+                    android:layout_marginLeft="15.15dp"/>
+
+                <ImageView
+                    android:layout_width="133.74dp"
+                    android:layout_height="2.55dp"
+                    android:src="@drawable/dashed_line"
+                    android:layout_marginLeft="14.78dp"
+                    android:layout_marginTop="3.04dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="90dp"
+                    android:layout_height="75dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15.15dp"
+                    android:elevation="10dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginBottom="25dp"
+                    app:cardCornerRadius="14dp">
+
+                    <ImageView
+                        android:layout_width="59dp"
+                        android:layout_height="57dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/brand_card_logo"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/pizza_logo" />
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginLeft="13dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:textSize="16dp"
+                        android:lineHeight="24dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="#1E1E1E"
+                        android:text="AirbBNB"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:lineHeight="18dp"
+                        android:textSize="12dp"
+                        android:textColor="#1E1E1E"
+                        android:text="Total Active Campaigns by Airbnb : 3"
+                        android:layout_marginTop="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/fi_globe"
+                            android:layout_marginRight="21dp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/fi_instagram"
+                            android:layout_marginRight="21dp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/fi_youtube"
+                            android:layout_marginRight="21dp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/fi_facebook"
+                            android:layout_marginRight="21dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.15dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/brand_detail_bg"
+                android:orientation="vertical"
+                android:paddingTop="18dp"
+                android:paddingBottom="18dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/featured_campaign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="23.09dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:lineHeight="24dp"
+                        android:text="Brand Overview"
+                        android:textColor="#1E1E1E"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="133.74dp"
+                        android:layout_height="2.55dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="3.04dp"
+                        android:src="@drawable/dashed_line" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.15dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="9dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:lineHeight="18dp"
+                    android:text="Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum facilisis enim elementum et. Placerat diam nec vitae aliquet aliquet tellus adipiscing lobortis dignissim. Ut lorem faucibus enim laoreet felis. Cursus etiam malesuada tristique duis vitae amet justo morbi. Sed nunc ac at hendrerit. Vulputate sit ut gravida cras sed. Faucibus facilisis ut nibh gravida. Id urna in placerat accumsan massa imperdiet nec lacus. Neque cras morbi tempus est condimentum enim fringilla. Lorem sit nulla at turpis congue tortor."
+                    android:textColor="#1E1E1E"
+                    android:textSize="12dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/featured_campaign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginTop="23.09dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:lineHeight="24dp"
+                            android:text="Total Campaigns by Airbnb"
+                            android:textColor="#1E1E1E"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:layout_width="133.74dp"
+                            android:layout_height="2.55dp"
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginTop="3.04dp"
+                            android:src="@drawable/dashed_line" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="12.34dp"
+                        android:lineHeight="18dp"
+                        android:text="@string/View_all"
+                        android:textColor="#552FFF"
+                        android:textSize="12dp" />
+
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/campg_by_brands_recv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
