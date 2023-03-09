@@ -6,9 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".activities.BrandListing">
 
-    <ScrollView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -16,77 +18,86 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
-                <RelativeLayout
+                <EditText
+                    android:id="@+id/search_edit"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:layout_width="293dp"
-                        android:layout_height="45dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerVertical="true"
-                        android:background="@drawable/active_campg_bg"
-                        android:drawableLeft="@drawable/search"
-                        android:drawablePadding="21dp"
-                        android:hint="Search"
-                        android:paddingLeft="23dp"
-                        android:paddingRight="10dp" />
-
-                    <ImageView
-                        android:layout_width="46dp"
-                        android:layout_height="46dp"
-                        android:layout_alignParentEnd="true"
-                        android:background="@drawable/active_campg_bg"
-                        android:padding="11dp"
-                        android:src="@drawable/filter" />
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/featured_campaign"
-                    android:layout_width="wrap_content"
-                    android:layout_height="24dp"
-                    android:layout_marginLeft="15.15dp"
-                    android:layout_marginTop="5.09dp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:lineHeight="24dp"
-                    android:text="Top Brands"
-                    android:textColor="#1E1E1E"
-                    android:textSize="16dp" />
+                    android:layout_height="45dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="11dp"
+                    android:layout_toStartOf="@+id/search_btn_brand_listing"
+                    android:background="@drawable/active_campg_bg"
+                    android:drawableLeft="@drawable/search"
+                    android:drawablePadding="16dp"
+                    android:hint="Search"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="10dp" />
 
                 <ImageView
-                    android:layout_width="133.74dp"
-                    android:layout_height="2.55dp"
-                    android:layout_marginLeft="14.78dp"
-                    android:layout_marginTop="3.04dp"
-                    android:src="@drawable/dashed_line" />
+                    android:id="@+id/search_btn_brand_listing"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/active_campg_bg"
+                    android:padding="11dp"
+                    android:src="@drawable/filter" />
 
-            </LinearLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/brands_list_recv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp" />
+            </RelativeLayout>
 
         </LinearLayout>
 
-    </ScrollView>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp">
+
+                    <TextView
+                        android:id="@+id/featured_campaign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5.09dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:lineHeight="24dp"
+                        android:text="Top Brands"
+                        android:textColor="#1E1E1E"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="133.74dp"
+                        android:layout_height="2.55dp"
+                        android:layout_marginTop="3.04dp"
+                        android:src="@drawable/dashed_line" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/brands_list_recv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_marginTop="15dp" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

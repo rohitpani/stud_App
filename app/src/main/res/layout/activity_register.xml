@@ -281,25 +281,33 @@
                         </LinearLayout>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="310dp"
+                            android:layout_width="match_parent"
                             android:layout_height="45dp"
+                            android:layout_gravity="center"
                             android:layout_marginLeft="15dp"
-                            android:background="@drawable/views_bg">
+                            android:background="@drawable/views_bg"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.5">
 
-                            <TextView
-                                android:layout_width="wrap_content"
+                            <EditText
+                                android:layout_width="match_parent"
                                 android:layout_height="21dp"
-                                android:layout_gravity="center"
-                                android:fontFamily="@font/poppins_semibold"
+                                android:gravity="top"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="#F9F7FF"
+                                android:fontFamily="@font/poppins_medium"
+                                android:hint="Instagram Handle"
                                 android:lineHeight="21dp"
-                                android:text="Instagram Handle"
                                 android:textColor="#898989"
                                 android:textSize="14dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHorizontal_bias="0.34"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.5" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
                             />
                         
@@ -328,31 +336,36 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:padding="5dp"
+                                android:padding="8dp"
                                 android:src="@drawable/youtube"/>
 
                         </LinearLayout>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="310dp"
+                            android:layout_width="match_parent"
                             android:layout_height="45dp"
+                            android:layout_gravity="center"
                             android:layout_marginLeft="15dp"
                             android:background="@drawable/views_bg">
 
-                            <TextView
-                                android:layout_width="wrap_content"
+                            <EditText
+                                android:layout_width="match_parent"
                                 android:layout_height="21dp"
-                                android:layout_gravity="center"
-                                android:fontFamily="@font/poppins_semibold"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="#F9F7FF"
+                                android:gravity="top"
+                                android:fontFamily="@font/poppins_medium"
+                                android:hint="YouTube Handle"
                                 android:lineHeight="21dp"
-                                android:text="YouTube Handle"
                                 android:textColor="#898989"
                                 android:textSize="14dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHorizontal_bias="0.34"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.5" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
                         />
 
@@ -400,6 +413,7 @@
                     android:drawableRight="@drawable/arrow_long_right"
                     android:fontFamily="@font/poppins_semibold"
                     android:text="Sign Up"
+                    android:id="@+id/sign_up_btn"
                     android:textAllCaps="false" />
 
                 <LinearLayout
@@ -421,6 +435,7 @@
                         android:text="Login"
                         android:textColor="#552FFF"
                         android:fontFamily="@font/poppins_semibold"
+                        android:id="@+id/login_tv_register"
                         android:layout_marginLeft="5dp"/>
 
                 </LinearLayout>

@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#E5E5E5"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,7 +20,6 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="65dp"
             android:src="@drawable/get_started_img" />
 
         <Button
@@ -30,27 +30,30 @@
             android:drawableRight="@drawable/arrow_long_right"
             android:fontFamily="@font/poppins_semibold"
             android:text="Join now"
+            android:id="@+id/join_now_btn"
             android:textAllCaps="false" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="21dp"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="Already a Member?"
-                android:textColor="@color/black"
-                android:fontFamily="@font/poppins_semibold"/>
+                android:textColor="@color/black" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="21dp"
-                android:text="Login"
-                android:textColor="#552FFF"
+                android:layout_marginLeft="5dp"
                 android:fontFamily="@font/poppins_semibold"
-                android:layout_marginLeft="5dp"/>
+                android:text="Login"
+                android:id="@+id/login_tv_get_Started"
+                android:textColor="#552FFF" />
 
         </LinearLayout>
     </LinearLayout>

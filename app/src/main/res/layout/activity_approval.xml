@@ -48,7 +48,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="47dp"
-            android:id="@+id/login"
+            android:id="@+id/login_btn_approval"
             android:background="@drawable/button_bg"
             android:drawableRight="@drawable/arrow_long_right"
             android:fontFamily="@font/poppins_semibold"

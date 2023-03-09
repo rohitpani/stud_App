@@ -6,45 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".activities.under_review">
 
-    <LinearLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:id="@+id/refreshLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/approval_img"
-            android:layout_gravity="center"
-            android:layout_marginTop="100dp"/>
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="28.5dp"
-            android:fontFamily="@font/poppins_bold"
-            android:textColor="#552FFF"
-            android:text="Under Review"
-            android:textSize="22dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="18dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/approval_img"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"/>
 
-        <TextView
-            android:layout_width="303dp"
-            android:layout_height="27.81dp"
-            android:text="Hello, your account is still under review"
-            android:textSize="14dp"
-            android:textColor="#1E1E1E"
-            android:textAlignment="center"
-            android:layout_gravity="center"
-            android:lineHeight="21dp"
-            android:layout_marginTop="17dp"
-            android:fontFamily="@font/poppins_medium"
-            android:textFontWeight="500"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="28.5dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="#552FFF"
+                android:text="Under Review"
+                android:textSize="22dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"/>
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="303dp"
+                android:layout_height="27.81dp"
+                android:text="Hello, your account is still under review"
+                android:textSize="14dp"
+                android:textColor="#1E1E1E"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:lineHeight="21dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textFontWeight="500"/>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

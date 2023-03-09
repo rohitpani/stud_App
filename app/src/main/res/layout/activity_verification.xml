@@ -142,6 +142,7 @@
                 android:drawableRight="@drawable/arrow_long_right"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Verify"
+                android:id="@+id/verify_btn"
                 android:textAllCaps="false" />
 
             <LinearLayout
@@ -157,13 +158,15 @@
                     android:text="Didn’t receive the code?"
                     android:textColor="@color/black"
                     android:fontFamily="@font/poppins_semibold"/>
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="21dp"
-                    android:text="Resend OTP"
-                    android:textColor="#552FFF"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:layout_marginLeft="5dp"/>
+                    android:text="Resend OTP"
+                    android:id="@+id/resend_OTP_tv"
+                    android:textColor="#552FFF" />
 
             </LinearLayout>
 

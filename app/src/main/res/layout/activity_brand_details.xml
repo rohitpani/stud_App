@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activities.Brand_Details">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +38,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
-                    android:id="@+id/featured_campaign"
+                    android:id="@+id/about_brand"
                     android:textSize="16dp"
                     android:lineHeight="24dp"
                     android:textColor="#1E1E1E"
@@ -75,7 +75,7 @@
                         android:layout_width="59dp"
                         android:layout_height="57dp"
                         android:layout_gravity="center"
-                        android:id="@+id/brand_card_logo"
+                        android:id="@+id/brand_logo_brand_details"
                         android:scaleType="fitXY"
                         android:src="@drawable/pizza_logo" />
 
@@ -91,6 +91,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="24dp"
+                        android:id="@+id/brand_name_brand_details"
                         android:textSize="16dp"
                         android:lineHeight="24dp"
                         android:fontFamily="@font/poppins_bold"
@@ -100,6 +101,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="18dp"
+                        android:id="@+id/brand_active_campg_tv"
                         android:lineHeight="18dp"
                         android:textSize="12dp"
                         android:textColor="#1E1E1E"
@@ -139,7 +141,7 @@
                     </LinearLayout>
 
                 </LinearLayout>
-                
+
             </LinearLayout>
 
             <LinearLayout
@@ -158,7 +160,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/featured_campaign"
+                        android:id="@+id/brand_overview"
                         android:layout_width="wrap_content"
                         android:layout_height="24dp"
                         android:layout_marginLeft="14dp"
@@ -184,6 +186,7 @@
                     android:layout_marginLeft="15.15dp"
                     android:layout_marginTop="13dp"
                     android:layout_marginRight="9dp"
+                    android:id="@+id/brand_overview_brand_details"
                     android:fontFamily="@font/poppins_medium"
                     android:lineHeight="18dp"
                     android:text="Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum facilisis enim elementum et. Placerat diam nec vitae aliquet aliquet tellus adipiscing lobortis dignissim. Ut lorem faucibus enim laoreet felis. Cursus etiam malesuada tristique duis vitae amet justo morbi. Sed nunc ac at hendrerit. Vulputate sit ut gravida cras sed. Faucibus facilisis ut nibh gravida. Id urna in placerat accumsan massa imperdiet nec lacus. Neque cras morbi tempus est condimentum enim fringilla. Lorem sit nulla at turpis congue tortor."
@@ -197,17 +200,22 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/view_all_total_campg"
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/featured_campaign"
+                            android:id="@+id/featured_campaign_brand_details"
                             android:layout_width="wrap_content"
                             android:layout_height="24dp"
                             android:layout_marginLeft="14dp"
                             android:layout_marginTop="23.09dp"
                             android:fontFamily="@font/poppins_semibold"
                             android:lineHeight="24dp"
-                            android:text="Total Campaigns by Airbnb"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="Total Campaigns by Company"
                             android:textColor="#1E1E1E"
                             android:textSize="16dp" />
 
@@ -221,12 +229,15 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/view_all_total_campg"
                         android:layout_width="wrap_content"
                         android:layout_height="18dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginRight="12.34dp"
                         android:lineHeight="18dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
                         android:text="@string/View_all"
                         android:textColor="#552FFF"
                         android:textSize="12dp" />
@@ -234,19 +245,28 @@
 
                 </RelativeLayout>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/campg_by_brands_recv"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="23dp" />
+                    android:layout_marginTop="23dp"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/campg_by_brands_recv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
 
 
             </LinearLayout>
 
+
+
         </LinearLayout>
 
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 
 

@@ -1,18 +1,19 @@
 package com.example.influencers_app.fragments
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.influencers_app.R
-import com.example.influencers_app.adapters.brands_home_adapter
-import com.example.influencers_app.adapters.campaign_home_adapter
-import com.example.influencers_app.adapters.category_adapter
-import com.example.influencers_app.adapters.curated_home_adapter
+import com.example.influencers_app.activities.BrandListing
+import com.example.influencers_app.activities.forgot_passwd
+import com.example.influencers_app.adapters.*
 import com.example.influencers_app.models.brands_list_home
 import com.example.influencers_app.models.campaign_list_home
 import com.example.influencers_app.models.category_welcome
@@ -24,6 +25,7 @@ class HomeFragment : Fragment() {
     lateinit var brands_recv_home:RecyclerView
     lateinit var cat_recv_home:RecyclerView
     lateinit var curated_recv_home:RecyclerView
+    lateinit var top_brands_viewAll:TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -36,6 +38,7 @@ class HomeFragment : Fragment() {
         brands_recv_home = rootView.findViewById(R.id.brands_recv_home)
         cat_recv_home = rootView.findViewById(R.id.cat_recv_home)
         curated_recv_home = rootView.findViewById(R.id.curated_recv_home)
+        top_brands_viewAll = rootView.findViewById(R.id.top_brands_viewAll)
 
         val campaignlist:MutableList<campaign_list_home> = mutableListOf()
         campaignlist.add(0, campaign_list_home(R.drawable.air_bnb_bg,R.drawable.air_bnb))
@@ -61,6 +64,11 @@ class HomeFragment : Fragment() {
         brands_recv_home.layoutManager = brands_lout
         brands_recv_home.adapter = brands_adapter
 
+        top_brands_viewAll.setOnClickListener {
+            val intent: Intent = Intent(activity, BrandListing::class.java)
+            startActivity(intent)
+        }
+
         var catgList: MutableList<category_welcome> = mutableListOf()
         catgList.add(0, category_welcome(R.drawable.luggage,"Travel"))
         catgList.add(1, category_welcome(R.drawable.fashion,"Fashion"))
@@ -71,7 +79,7 @@ class HomeFragment : Fragment() {
         catgList.add(6,category_welcome(R.drawable.books,"Books"))
         catgList.add(7,category_welcome(R.drawable.food,"Food"))
 
-        val catgadapter = category_adapter(catgList)
+        val catgadapter = category_home_adapter(catgList)
         val cat_lout = LinearLayoutManager(this.context,LinearLayoutManager.HORIZONTAL,false)
         cat_recv_home.layoutManager = cat_lout
         cat_recv_home.adapter = catgadapter
@@ -81,6 +89,7 @@ class HomeFragment : Fragment() {
         curatedList.add(1, curated_data_home(R.drawable.pizza,R.drawable.pizza_logo,"Food"))
         curatedList.add(2,curated_data_home(R.drawable.books_club,R.drawable.peng_books,"Books"))
 
+        curated_recv_home.isNestedScrollingEnabled = false
         val curatedadapter = curated_home_adapter(curatedList)
         val curated_lout = LinearLayoutManager(this.context,LinearLayoutManager.VERTICAL,false)
         curated_recv_home.layoutManager = curated_lout

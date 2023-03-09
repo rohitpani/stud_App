@@ -5,13 +5,25 @@
     android:layout_width="103dp"
     android:layout_height="115dp"
     app:cardCornerRadius="11dp"
-    android:background="@android:drawable/dialog_holo_light_frame"
-    android:elevation="2dp"
-    android:layout_margin="8dp">
+    android:id="@+id/welcome_card"
+    android:elevation="13dp"
+    android:layout_margin="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/border_welcome_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selected_welcome_card_bg"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal" />
 
         <ImageView
             android:id="@+id/cat_img"

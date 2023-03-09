@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".fragments.HomeFragment">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         
@@ -16,10 +16,9 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="238dp"
                 android:src="@drawable/banner"
                 android:scaleType="fitXY"/>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -127,6 +126,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:lineHeight="18dp"
+                        android:id="@+id/top_brands_viewAll"
                         android:text="@string/View_all"
                         android:textColor="#552FFF"
                         android:textSize="12dp"
@@ -275,8 +275,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="14dp"
-                    android:layout_marginLeft="8.5dp"
-                    android:layout_marginBottom="100dp"
+                    android:layout_marginBottom="40dp"
                     android:orientation="horizontal">
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -290,6 +289,6 @@
             
         </LinearLayout>
         
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>
