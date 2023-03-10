@@ -6,4 +6,151 @@
     android:layout_height="match_parent"
     tools:context=".activities.campaign_details">
 
+    <ImageView
+        android:id="@+id/campg_imgv"
+        android:layout_width="match_parent"
+        android:layout_height="247dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/air_bnb_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/background_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="6dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/backward_arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/background_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="16.5dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5.58dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/share" />
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablout1"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/campg_imgv"
+        app:tabIndicatorColor="#552FFF"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="#1E1E1E"
+        app:tabTextAppearance="@style/tab_text"
+        app:tabTextColor="#AFAFAF"
+        android:nestedScrollingEnabled="true">
+
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Details"
+                    android:id="@+id/detail_tab"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Influencer Criteria"
+                    android:id="@+id/influencer_criteria_tab"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deliverables"
+                    android:id="@+id/deliverables_tab"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Do’s &amp; Dont’s"
+                    android:id="@+id/dos_donts_tab"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="References"
+                    android:id="@+id/references_tab"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tablout1"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="13dp">
+
+            <Button
+                android:id="@+id/participate_now_btn_details_frag"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@+id/search_btn_brand_listing"
+                android:background="@drawable/button_bg"
+                android:drawableRight="@drawable/arrow_long_right"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Participate now"
+                android:textAllCaps="false"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/search_btn_brand_listing"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/chat_bg"
+                android:layout_centerVertical="true"
+                android:padding="11dp"
+                android:src="@drawable/chat" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.details_fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#F9F7FF">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:text="Makeup by MyGlamm"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textSize="18dp"
+                        android:textColor="#1E1E1E"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="12dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@drawable/id_bg">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="#ID890760"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="14dp"
+                        android:textColor="#363942"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="7dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:id="@+id/about_brand"
+                        android:textSize="16dp"
+                        android:lineHeight="24dp"
+                        android:textColor="#1E1E1E"
+                        android:text="Campaign Overview"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginTop="18.09dp"
+                        android:layout_marginLeft="13dp"/>
+
+                    <ImageView
+                        android:layout_width="133.74dp"
+                        android:layout_height="2.55dp"
+                        android:src="@drawable/dashed_line"
+                        android:layout_marginLeft="14.78dp"
+                        android:layout_marginTop="3.04dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="26dp"
+                    android:layout_marginTop="11dp"
+                    android:textSize="12dp"
+                    android:lineHeight="18dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#1E1E1E"
+                    android:text="Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum facilisis enim elementum et. Placerat diam nec vitae aliquet aliquet tellus adipiscing lobortis dignissim. Ut lorem faucibus enim laoreet felis. Cursus etiam malesuada  Read more"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F5F5F5"
+                    android:layout_marginTop="22dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:id="@+id/about_brand"
+                        android:textSize="16dp"
+                        android:lineHeight="24dp"
+                        android:textColor="#1E1E1E"
+                        android:text="Category"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginTop="18.09dp"
+                        android:layout_marginLeft="13dp"/>
+
+                    <ImageView
+                        android:layout_width="133.74dp"
+                        android:layout_height="2.55dp"
+                        android:src="@drawable/dashed_line"
+                        android:layout_marginLeft="14.78dp"
+                        android:layout_marginTop="3.04dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:text="Beauty, Lifestyle"
+                    android:textColor="#1E1E1E"
+                    android:lineHeight="18dp"
+                    android:textSize="12dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F5F5F5"
+                    android:layout_marginTop="19dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:id="@+id/about_brand"
+                        android:textSize="16dp"
+                        android:lineHeight="24dp"
+                        android:textColor="#1E1E1E"
+                        android:text="Campaign Highlights"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginTop="18.09dp"
+                        android:layout_marginLeft="13dp"/>
+
+                    <ImageView
+                        android:layout_width="133.74dp"
+                        android:layout_height="2.55dp"
+                        android:src="@drawable/dashed_line"
+                        android:layout_marginLeft="14.78dp"
+                        android:layout_marginTop="3.04dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="13dp"
+                    android:layout_gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="125dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardUseCompatPadding="false"
+                        app:cardElevation="6dp"
+                        android:layout_margin="13dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/collab_img"
+                                android:layout_width="66dp"
+                                android:layout_height="61dp"
+                                android:layout_marginTop="16dp"
+                                android:src="@drawable/collaboration"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginTop="11dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="Barter Collaboration"
+                                android:textAlignment="center"
+                                android:textColor="#5E6366"
+                                android:textSize="15dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/collab_img" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="125dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardUseCompatPadding="false"
+                        app:cardElevation="6dp"
+                        android:layout_margin="13dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="65dp"
+                                android:src="@drawable/calendar"
+                                android:layout_marginTop="16dp"
+                                android:id="@+id/campg_dates"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginTop="11dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginRight="3dp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="25th Jan - 6th Feb"
+                                android:textAlignment="center"
+                                android:textColor="#5E6366"
+                                android:textSize="15dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/campg_dates" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_alignParentBottom="true">-->
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_margin="13dp">-->
+
+<!--                        <Button-->
+<!--                            android:id="@+id/participate_now_btn_details_frag"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="47dp"-->
+<!--                            android:layout_alignParentStart="true"-->
+<!--                            android:layout_marginEnd="15dp"-->
+<!--                            android:layout_toStartOf="@+id/search_btn_brand_listing"-->
+<!--                            android:background="@drawable/button_bg"-->
+<!--                            android:drawableRight="@drawable/arrow_long_right"-->
+<!--                            android:fontFamily="@font/poppins_semibold"-->
+<!--                            android:text="Participate now"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:textSize="16dp" />-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/search_btn_brand_listing"-->
+<!--                            android:layout_width="35dp"-->
+<!--                            android:layout_height="35dp"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:background="@drawable/chat_bg"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:padding="11dp"-->
+<!--                            android:src="@drawable/chat" />-->
+
+<!--                    </RelativeLayout>-->
+
+<!--            </LinearLayout>-->
+
+    </ScrollView>
+
+</FrameLayout>
