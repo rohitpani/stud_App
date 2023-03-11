@@ -3,12 +3,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.deliverablesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Deliverables Fragment" />
+        android:layout_height="wrap_content">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/criteria_lnout1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:id="@+id/about_brand"
+                    android:textSize="16dp"
+                    android:lineHeight="24dp"
+                    android:textColor="#1E1E1E"
+                    android:text="Deliverables"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="13dp"/>
+
+                <ImageView
+                    android:layout_width="133.74dp"
+                    android:layout_height="2.55dp"
+                    android:src="@drawable/dashed_line"
+                    android:layout_marginLeft="14.78dp"
+                    android:layout_marginTop="3.04dp"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+    </ScrollView>
 
 </FrameLayout>
