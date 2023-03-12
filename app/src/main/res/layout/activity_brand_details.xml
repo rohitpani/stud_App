@@ -51,6 +51,7 @@
                     android:layout_width="133.74dp"
                     android:layout_height="2.55dp"
                     android:src="@drawable/dashed_line"
+                    app:tint="#B6A6FF"
                     android:layout_marginLeft="14.78dp"
                     android:layout_marginTop="3.04dp"/>
 
@@ -98,15 +99,38 @@
                         android:textColor="#1E1E1E"
                         android:text="AirbBNB"/>
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="18dp"
-                        android:id="@+id/brand_active_campg_tv"
-                        android:lineHeight="18dp"
-                        android:textSize="12dp"
-                        android:textColor="#1E1E1E"
-                        android:text="Total Active Campaigns by Airbnb : 3"
-                        android:layout_marginTop="1dp"/>
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="1dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:lineHeight="18dp"
+                            android:textSize="12dp"
+                            android:textColor="#1E1E1E"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Total Active Campaigns : " />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brand_active_campg_tv"
+                            android:background="@drawable/active_campg_no_bg"
+                            android:textSize="15dp"
+                            android:textColor="#552FFF"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="6dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:layout_gravity="center"
+                            android:text="3" />
+
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -176,7 +200,8 @@
                         android:layout_height="2.55dp"
                         android:layout_marginLeft="14dp"
                         android:layout_marginTop="3.04dp"
-                        android:src="@drawable/dashed_line" />
+                        android:src="@drawable/dashed_line"
+                        app:tint="#B6A6FF"/>
 
                 </LinearLayout>
 
@@ -215,7 +240,7 @@
                             android:lineHeight="24dp"
                             android:maxLines="1"
                             android:ellipsize="end"
-                            android:text="Total Campaigns by Company"
+                            android:text="Total Campaigns"
                             android:textColor="#1E1E1E"
                             android:textSize="16dp" />
 
@@ -224,7 +249,8 @@
                             android:layout_height="2.55dp"
                             android:layout_marginLeft="14dp"
                             android:layout_marginTop="3.04dp"
-                            android:src="@drawable/dashed_line" />
+                            android:src="@drawable/dashed_line"
+                            app:tint="#B6A6FF"/>
 
                     </LinearLayout>
 

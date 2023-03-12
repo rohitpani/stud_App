@@ -43,9 +43,9 @@ class Brand_Details : AppCompatActivity() {
             brand_logo.setImageResource(b_logo.toInt())
         }
         brand_name.text = b_name
-        brand_active_campg.text = "Total Active Campaigns by "+b_name+" : "+b_active_campg
+        brand_active_campg.text = b_active_campg
         brand_overview.text = b_overview
-        featured_campaign_by_brand.text = "Total Campaigns by "+b_name
+        //featured_campaign_by_brand.text = "Total Campaigns by "+b_name
 
 
         val campg_list_of_brands = mutableListOf<brands_campaign_details>()

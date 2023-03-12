@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.HomeFragment">
 
     <androidx.core.widget.NestedScrollView
@@ -50,6 +51,7 @@
                             android:layout_width="133.74dp"
                             android:layout_height="2.55dp"
                             android:src="@drawable/dashed_line"
+                            app:tint="#B6A6FF"
                             android:layout_marginLeft="14.78dp"
                             android:layout_marginTop="3.04dp"/>
 
@@ -115,6 +117,7 @@
                             android:layout_width="133.74dp"
                             android:layout_height="2.55dp"
                             android:src="@drawable/dashed_line"
+                            app:tint="#B6A6FF"
                             android:layout_marginLeft="14.78dp"
                             android:layout_marginTop="3.04dp"/>
 
@@ -181,6 +184,7 @@
                             android:layout_width="133.74dp"
                             android:layout_height="2.55dp"
                             android:src="@drawable/dashed_line"
+                            app:tint="#B6A6FF"
                             android:layout_marginLeft="14.78dp"
                             android:layout_marginTop="3.04dp"/>
 
@@ -252,6 +256,7 @@
                             android:layout_width="133.74dp"
                             android:layout_height="2.55dp"
                             android:src="@drawable/dashed_line"
+                            app:tint="#B6A6FF"
                             android:layout_marginLeft="14.78dp"
                             android:layout_marginTop="3.04dp"/>
 
