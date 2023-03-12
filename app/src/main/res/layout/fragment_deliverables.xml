@@ -18,7 +18,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:id="@+id/criteria_lnout1"
+                android:id="@+id/deliverables_lnout1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent">
 
@@ -39,9 +39,285 @@
                     android:layout_height="2.55dp"
                     android:src="@drawable/dashed_line"
                     android:layout_marginLeft="14.78dp"
-                    android:layout_marginTop="3.04dp"/>
+                    android:layout_marginTop="3.04dp"
+                    app:tint="#B6A6FF" />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/deliverables_social_media_lnout2"
+                app:layout_constraintTop_toBottomOf="@id/deliverables_lnout1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginRight="13dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="41dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/card_border"
+                            android:orientation="horizontal"
+                            android:layout_alignParentStart="true"
+                            android:id="@+id/insta_logo_deliverabes_lout">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="5dp"
+                                android:src="@drawable/instagram" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="12.38dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/insta_logo_deliverabes_lout">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:textSize="14dp"
+                                android:textColor="#1E1E1E"
+                                android:text="Post 1 Reel and 2 posts"
+                                android:fontFamily="@font/poppins_semibold"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="18dp"
+                                    android:textSize="12dp"
+                                    android:textColor="#1E1E1E"
+                                    android:text="This is mandatory"
+                                    android:fontFamily="@font/poppins_medium"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="18dp"
+                                    android:textSize="12dp"
+                                    android:textColor="@color/red"
+                                    android:text="*"
+                                    android:layout_marginLeft="3dp"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/move_forward_arrow"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginRight="13dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="41dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/card_border"
+                            android:orientation="horizontal"
+                            android:layout_alignParentStart="true"
+                            android:id="@+id/youtube_logo_deliverabes_lout">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="8dp"
+                                android:src="@drawable/youtube" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="12.38dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/youtube_logo_deliverabes_lout">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:textSize="14dp"
+                                android:textColor="#1E1E1E"
+                                android:text="Post a vlog on YouTube"
+                                android:fontFamily="@font/poppins_semibold"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="18dp"
+                                    android:textSize="12dp"
+                                    android:textColor="#1E1E1E"
+                                    android:text="This is mandatory"
+                                    android:fontFamily="@font/poppins_medium"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="18dp"
+                                    android:textSize="12dp"
+                                    android:textColor="@color/red"
+                                    android:text="*"
+                                    android:layout_marginLeft="3dp"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/move_forward_arrow"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/deliverables_frag_line1"
+                android:background="#F5F5F5"
+                android:layout_marginTop="19dp"
+                app:layout_constraintTop_toBottomOf="@+id/deliverables_social_media_lnout2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/deliverables_lnout3_payment_details_section"
+                app:layout_constraintTop_toBottomOf="@+id/deliverables_frag_line1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:id="@+id/about_brand"
+                    android:textSize="16dp"
+                    android:lineHeight="24dp"
+                    android:textColor="#1E1E1E"
+                    android:text="Payment Details"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginLeft="13dp"/>
+
+                <ImageView
+                    android:layout_width="133.74dp"
+                    android:layout_height="2.55dp"
+                    android:src="@drawable/dashed_line"
+                    android:tint="#B6A6FF"
+                    android:layout_marginLeft="14.78dp"
+                    android:layout_marginTop="3.04dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="16.03dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/fi_gift"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:textSize="12dp"
+                            android:textColor="#5E6366"
+                            android:text="Rewards"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_marginLeft="7.25dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:textSize="16dp"
+                        android:textColor="#1E1E1E"
+                        android:text="Reimbursement + Payout 450"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10dp"
+                        android:textColor="#5E6366"
+                        android:textStyle="italic"
+                        android:text="Please Note : you get paid the total amount only once
+                                       you complete the campaign"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="1dp"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/deliverables_frag_line2"
+                android:background="#F5F5F5"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/deliverables_lnout3_payment_details_section"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
         

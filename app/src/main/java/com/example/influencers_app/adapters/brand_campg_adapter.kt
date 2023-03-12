@@ -1,5 +1,6 @@
 package com.example.influencers_app.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,8 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.influencers_app.R
+import com.example.influencers_app.activities.Brand_Details
+import com.example.influencers_app.activities.campaign_details
 import com.example.influencers_app.models.brands_campaign_details
 
 class brand_campg_adapter(val datalist:MutableList<brands_campaign_details>) : RecyclerView.Adapter<brand_campg_adapter.viewHolder>() {
@@ -35,6 +38,10 @@ class brand_campg_adapter(val datalist:MutableList<brands_campaign_details>) : R
         }
         else{
             holder.status_tv.background = ContextCompat.getDrawable(holder.status_tv.context,R.drawable.red_bg)
+        }
+        holder.itemview.setOnClickListener{
+            val intent: Intent = Intent(holder.back_img.context, campaign_details::class.java)
+            holder.back_img.context.startActivity(intent)
         }
     }
 }
