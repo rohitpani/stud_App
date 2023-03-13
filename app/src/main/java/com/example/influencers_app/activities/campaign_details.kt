@@ -1,8 +1,10 @@
 package com.example.influencers_app.activities
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.LinearLayout
 import androidx.viewpager.widget.ViewPager
 import com.example.influencers_app.R
 import com.example.influencers_app.utils.pageAdapter
@@ -17,6 +19,7 @@ class campaign_details : AppCompatActivity() {
     lateinit var dos_dont_tab: TabItem
     lateinit var references_tab: TabItem
     lateinit var viewpager: ViewPager
+    lateinit var back_btn:LinearLayout
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +32,13 @@ class campaign_details : AppCompatActivity() {
 //        dos_dont_tab = findViewById(R.id.dos_donts_tab)
 //        references_tab = findViewById(R.id.references_tab)
         viewpager = findViewById(R.id.viewpager1)
+        back_btn = findViewById(R.id.back_btn)
+
+        back_btn.setOnClickListener {
+//            val intent:Intent = Intent(this,Brand_Details::class.java)
+//            startActivity((intent))
+//
+        }
 
         var pageadapter = pageAdapter(supportFragmentManager,tablout.tabCount)
         viewpager.adapter = pageadapter

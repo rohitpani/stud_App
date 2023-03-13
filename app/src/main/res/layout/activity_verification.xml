@@ -72,14 +72,14 @@
             android:layout_gravity="center"
             android:textColor="#1E1E1E"
             android:layout_marginTop="8dp"/>
-        
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="15dp"
             android:layout_gravity="center">
-            
+
             <TextView
                 android:layout_width="55dp"
                 android:layout_height="55dp"
@@ -112,7 +112,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/otp_bg"/>
-            
+
         </LinearLayout>
 
         <TextView

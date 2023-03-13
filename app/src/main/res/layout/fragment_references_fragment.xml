@@ -3,12 +3,314 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.references_fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="References Fragment" />
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/reference_frag_lnout1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:id="@+id/about_brand"
+                    android:textSize="16dp"
+                    android:lineHeight="24dp"
+                    android:textColor="#1E1E1E"
+                    android:text="Reference Content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="13dp"/>
+
+                <ImageView
+                    android:layout_width="133.74dp"
+                    android:layout_height="2.55dp"
+                    android:src="@drawable/dashed_line"
+                    android:layout_marginLeft="14.78dp"
+                    android:layout_marginTop="3.04dp"
+                    app:tint="#B6A6FF" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/reference_frag_lnout2"
+                app:layout_constraintTop_toBottomOf="@+id/reference_frag_lnout1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="13dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="146dp"
+                    app:cardCornerRadius="10dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ref_img1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <LinearLayout
+                            android:layout_width="54.49dp"
+                            android:layout_height="54.49dp"
+                            android:background="@drawable/play_bg"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/play"
+                                android:padding="10dp"/>
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="17dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="127.79dp"
+                        android:layout_weight="1.25"
+                        app:cardCornerRadius="10dp"
+                        android:id="@+id/ref_image2"
+                        android:layout_marginRight="7dp"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ref_img2"
+                            android:scaleType="fitXY"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="127.79dp"
+                        android:layout_weight="0.8"
+                        app:cardCornerRadius="10dp"
+                        android:id="@+id/ref_image3"
+                        android:layout_marginLeft="7dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_toEndOf="@+id/ref_img2">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ref_img3"
+                            android:scaleType="fitXY"/>
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="17dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="127.79dp"
+                        android:layout_weight="0.8"
+                        app:cardCornerRadius="10dp"
+                        android:id="@+id/ref_image4"
+                        android:layout_marginRight="7dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ref_img4"
+                            android:scaleType="fitXY"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="127.79dp"
+                        android:layout_weight="1.25"
+                        app:cardCornerRadius="10dp"
+                        android:id="@+id/ref_image5"
+                        android:layout_marginLeft="7dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ref_img5"
+                            android:scaleType="fitXY"/>
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reference_frag_lnout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="13dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/reference_frag_lnout2">
+
+                <TextView
+                    android:id="@+id/about_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineHeight="24dp"
+                    android:text="Caption and Hashtags"
+                    android:textColor="#1E1E1E"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:layout_width="133.74dp"
+                    android:layout_height="2.55dp"
+                    android:layout_marginLeft="2.78dp"
+                    android:layout_marginTop="3.04dp"
+                    android:src="@drawable/dashed_line"
+                    app:tint="#B6A6FF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum facilisis enim elementum et. Placerat diam nec vitae aliquet aliquet tellus adipiscing lobortis dignissim. Ut lorem faucibus enim laoreet felis. Cursus etiam malesuada tristique duis vitae amet justo morbi. Sed nunc ac at hendrerit. Vulputate sit ut gravida cras sed. Faucibus facilisis ut nibh gravida. Id urna in placerat accumsan massa imperdiet nec lacus. Neque cras morbi tempus est condimentum enim fringilla. Lorem sit nulla at turpis congue tortor."
+                    android:textSize="12dp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="#1E1E1E"/>
+            </LinearLayout>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flexWrap="wrap"
+                app:alignContent="flex_start"
+                android:id="@+id/reference_frag_lnout4"
+                app:layout_constraintTop_toBottomOf="@+id/reference_frag_lnout3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="80dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hashtag_bg"
+                    android:fontFamily="@font/poppins"
+                    android:text="#loremipsum"
+                    android:textSize="12dp"
+                    android:textColor="#1E1E1E"
+                    android:textAlignment="center"
+                    android:layout_margin="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingRight="13dp"
+                    android:paddingLeft="13dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hashtag_bg"
+                    android:fontFamily="@font/poppins"
+                    android:text="#loremipsum"
+                    android:textSize="12dp"
+                    android:textColor="#1E1E1E"
+                    android:textAlignment="center"
+                    android:layout_margin="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingRight="13dp"
+                    android:paddingLeft="13dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hashtag_bg"
+                    android:fontFamily="@font/poppins"
+                    android:text="#loremipsum"
+                    android:textSize="12dp"
+                    android:textColor="#1E1E1E"
+                    android:textAlignment="center"
+                    android:layout_margin="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingRight="13dp"
+                    android:paddingLeft="13dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hashtag_bg"
+                    android:fontFamily="@font/poppins"
+                    android:text="#loremipsum_dbhfbd"
+                    android:textSize="12dp"
+                    android:textColor="#1E1E1E"
+                    android:textAlignment="center"
+                    android:layout_margin="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingRight="13dp"
+                    android:paddingLeft="13dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hashtag_bg"
+                    android:fontFamily="@font/poppins"
+                    android:text="#loremipsum"
+                    android:textSize="12dp"
+                    android:textColor="#1E1E1E"
+                    android:textAlignment="center"
+                    android:layout_margin="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingRight="13dp"
+                    android:paddingLeft="13dp"/>
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </FrameLayout>
