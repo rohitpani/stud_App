@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Home"
+        android:icon="@drawable/cheked"
+        android:id="@+id/home_frag"/>
+    <item
+        android:title="Campaigns"
+        android:icon="@drawable/campg_icon"
+        android:id="@+id/campg_frag"/>
+    <item
+        android:title="Earnings"
+        android:icon="@drawable/earning_icon"
+        android:id="@+id/earning_frag"/>
+    <item
+        android:title="Profile"
+        android:icon="@drawable/profile_icon"
+        android:id="@+id/profile_frag"/>
+</menu>

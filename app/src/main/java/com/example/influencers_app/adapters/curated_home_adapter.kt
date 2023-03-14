@@ -30,7 +30,7 @@ class curated_home_adapter(val datalist:MutableList<curated_data_home>): Recycle
     class viewHolder( var itemview: View): RecyclerView.ViewHolder(itemview) {
 
         var bgimg = itemview.findViewById<ImageView>(R.id.banner_curated)
-        var logoimg = itemview.findViewById<ImageView>(R.id.logo_img_home)
+        var logoimg = itemview.findViewById<ImageView>(R.id.logo_curated_lnout)
         var catg_name = itemview.findViewById<TextView>(R.id.camp_catg)
 
     }

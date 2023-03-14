@@ -15,7 +15,7 @@
         <ImageView
             android:id="@+id/banner_curated"
             android:layout_width="match_parent"
-            android:layout_height="236dp"
+            android:layout_height="200dp"
             android:scaleType="fitXY"
             android:src="@drawable/pizza"
             app:layout_constraintEnd_toEndOf="parent"
@@ -70,13 +70,13 @@
             android:id="@+id/cardView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="154.5dp"
+            android:layout_marginTop="100.5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
@@ -85,7 +85,89 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:id="@+id/curated_lnout1"
+                    android:layout_marginLeft="100dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/banner_curated">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/social_media_lout"
+                            android:layout_marginRight="15dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:lineHeight="15dp"
+                            android:text="#CampaignHashtag"
+                            android:textAlignment="textStart"
+                            android:textColor="#1E1E1E"
+                            android:textSize="11dp"
+                            android:layout_centerVertical="true"/>
+
+                        <LinearLayout
+                            android:id="@+id/social_media_lout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="25.93dp"
+                                android:layout_height="25.41dp"
+                                android:layout_marginRight="14dp"
+                                android:gravity="center"
+                                android:background="@drawable/social_media_bg"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="19dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/instagram" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="25.93dp"
+                                android:layout_height="25.41dp"
+                                android:layout_marginRight="14dp"
+                                android:gravity="center"
+                                android:background="@drawable/social_media_bg"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/youtube" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/curated_lnout2"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/curated_lnout1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -95,72 +177,100 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
-                            android:layout_marginStart="100dp"
-                            android:layout_marginLeft="100dp"
                             android:layout_marginEnd="20dp"
-                            android:layout_toStartOf="@+id/apply_btn"
-                            android:orientation="vertical">
+                            android:layout_toStartOf="@+id/paid_status"
+                            android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:fontFamily="@font/poppins_bold"
+                                android:fontFamily="@font/poppins_medium"
                                 android:lineHeight="15dp"
-                                android:text="#CampaignHashtag"
+                                android:text="Category : "
                                 android:textAlignment="center"
                                 android:textColor="#1E1E1E"
-                                android:textSize="10dp" />
+                                android:textSize="12dp" />
 
-                            <LinearLayout
+                            <TextView
+                                android:id="@+id/camp_catg"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:ellipsize="end"
+                                android:fontFamily="@font/poppins_medium"
+                                android:lineHeight="15dp"
+                                android:maxLines="1"
+                                android:text="Food"
+                                android:textAlignment="viewStart"
+                                android:textColor="#1E1E1E"
+                                android:textSize="12dp" />
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/poppins_medium"
-                                    android:lineHeight="15dp"
-                                    android:text="Category : "
-                                    android:textAlignment="center"
-                                    android:textColor="#1E1E1E"
-                                    android:textSize="10dp" />
+                        </LinearLayout>
 
-                                <TextView
-                                    android:id="@+id/camp_catg"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:ellipsize="end"
-                                    android:fontFamily="@font/poppins_medium"
-                                    android:lineHeight="15dp"
-                                    android:maxLines="1"
-                                    android:text="Food"
-                                    android:textAlignment="viewStart"
-                                    android:textColor="#1E1E1E"
-                                    android:textSize="10dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/paid_status"
+                            android:background="@drawable/paid_status_bg"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_alignParentRight="true"
+                            android:lineHeight="10.5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="1dp"
+                            android:text="Paid"
+                            android:textColor="#5E6366"
+                            android:textSize="7dp"/>
 
-                            </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/curated_lnout2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_toStartOf="@+id/apply_btn"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true">
+
+                            <ProgressBar
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:progress="25"
+                                android:progressBackgroundTint="#F0F0F0"
+                                android:progressTint="#552FFF" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/paid_status_bg"
+                                android:layout_marginTop="8dp"
                                 android:fontFamily="@font/poppins_medium"
                                 android:lineHeight="10.5dp"
-                                android:paddingLeft="10dp"
-                                android:paddingTop="1dp"
-                                android:paddingRight="10dp"
-                                android:paddingBottom="1dp"
-                                android:text="Paid"
-                                android:textColor="#5E6366"
-                                android:textSize="7dp" />
+                                android:text="50/500 Profiles Shortlisted"
+                                android:textColor="#1E1E1E"
+                                android:textSize="12dp" />
 
                         </LinearLayout>
 
                         <TextView
                             android:layout_width="88dp"
-                            android:layout_height="30dp"
+                            android:layout_height="37dp"
                             android:layout_alignParentRight="true"
                             android:layout_marginTop="7dp"
                             android:layout_marginRight="10dp"
@@ -173,93 +283,13 @@
                             android:textAlignment="center"
                             android:textAllCaps="false"
                             android:textColor="#FFFFFF"
-                            android:textSize="10dp" />
-
+                            android:textSize="14dp" />
                     </RelativeLayout>
 
-
                 </LinearLayout>
-                
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_marginLeft="26dp"
-                            android:layout_marginTop="12.7dp"
-                            android:layout_marginRight="28dp"
-                            android:layout_toStartOf="@+id/social_media_lout"
-                            android:orientation="vertical">
-
-                            <ProgressBar
-                                style="@android:style/Widget.ProgressBar.Horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="10dp"
-                                android:progress="25"
-                                android:progressBackgroundTint="#F0F0F0"
-                                android:progressTint="#5BC0F8" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="11dp"
-                                android:layout_marginTop="4dp"
-                                android:fontFamily="@font/poppins_medium"
-                                android:lineHeight="10.5dp"
-                                android:text="50/500 Profiles Shortlisted"
-                                android:textColor="#1E1E1E"
-                                android:textSize="7dp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:id="@+id/social_media_lout"
-                            android:layout_alignParentEnd="true">
-
-                            <LinearLayout
-                                android:layout_width="35dp"
-                                android:layout_height="37dp"
-                                android:orientation="vertical"
-                                android:background="@drawable/social_media_bg"
-                                android:layout_marginRight="14dp">
-                                <ImageView
-                                    android:layout_width="28dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:src="@drawable/instagram"/>
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="35dp"
-                                android:layout_height="37dp"
-                                android:orientation="vertical"
-                                android:background="@drawable/social_media_bg"
-                                android:layout_marginRight="14dp">
-                                <ImageView
-                                    android:layout_width="22dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:src="@drawable/youtube"/>
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </RelativeLayout>
-                    
-                </LinearLayout>
-                
-            </LinearLayout>
-            
 
         </androidx.cardview.widget.CardView>
 
@@ -277,12 +307,12 @@
             app:layout_constraintHorizontal_bias="0.021"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/banner_curated"
-            app:layout_constraintVertical_bias="0.641">
+            app:layout_constraintVertical_bias="0.401">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/logo_img_home"
+                android:id="@+id/logo_curated_lnout"
                 android:src="@drawable/the_ordinary"/>
 
         </androidx.cardview.widget.CardView>
