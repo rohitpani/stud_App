@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="55.37dp"
+    android:layout_height="55.37dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="14dp"
+    android:layout_marginRight="29dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="35dp"
+    app:cardUseCompatPadding="false"
+    app:cardPreventCornerOverlap="true"
+    android:background="@android:drawable/dialog_holo_light_frame">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/brands_logo_filter"
+        android:src="@drawable/the_ordinary"/>
+
+</androidx.cardview.widget.CardView>
