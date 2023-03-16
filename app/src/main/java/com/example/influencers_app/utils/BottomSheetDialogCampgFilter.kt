@@ -1,5 +1,6 @@
 package com.example.influencers_app.utils
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.influencers_app.R
@@ -22,17 +24,24 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class BottomSheetDialogCampgFilter: BottomSheetDialogFragment() {
     lateinit var campg_type_recv:RecyclerView
+    lateinit var pricing_type_recv:RecyclerView
     lateinit var brands_recv:RecyclerView
     lateinit var interests_recv:RecyclerView
     lateinit var language_recv:RecyclerView
     lateinit var cancel:ImageView
+    lateinit var insta_lnout:LinearLayout
+    lateinit var youtube_lnout:LinearLayout
+    @SuppressLint("MissingInflatedId")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v:View = inflater.inflate(R.layout.filter_lout,container,false)
         cancel = v.findViewById(R.id.filter_cancel)
         campg_type_recv = v.findViewById(R.id.campg_type_filter_recv)
+        pricing_type_recv = v.findViewById(R.id.pricing_type_filter_recv)
         brands_recv = v.findViewById(R.id.brands_filter_recv)
         interests_recv = v.findViewById(R.id.interests_filter_recv)
         language_recv = v.findViewById(R.id.language_filter_recv)
+        insta_lnout = v.findViewById(R.id.insta_lnout_filter)
+        youtube_lnout = v.findViewById(R.id.youtube_lnout_filter)
 
         cancel.setOnClickListener {
             dismiss()
@@ -48,6 +57,15 @@ class BottomSheetDialogCampgFilter: BottomSheetDialogFragment() {
         campg_type_recv.layoutManager = filter_lout
         campg_type_recv.adapter = filter_adapter
 
+
+        val pricing_types_list = mutableListOf<filter_Cards_Data>()
+        pricing_types_list.add(0, filter_Cards_Data("Barter"))
+        pricing_types_list.add(1, filter_Cards_Data("Paid"))
+
+        val pricing_adapter = filter_lout_adapter(pricing_types_list)
+        val pricing_lout = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL,false)
+        pricing_type_recv.layoutManager = pricing_lout
+        pricing_type_recv.adapter = pricing_adapter
 
         val brands_list = mutableListOf<filter_Brands_Data>()
         brands_list.add(0, filter_Brands_Data(R.drawable.myglamm))
@@ -84,6 +102,10 @@ class BottomSheetDialogCampgFilter: BottomSheetDialogFragment() {
         val language_lout = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL,false)
         language_recv.layoutManager = language_lout
         language_recv.adapter = language_adapter
+
+//        insta_lnout.setOnClickListener {
+//
+//        }
 
         return v
     }

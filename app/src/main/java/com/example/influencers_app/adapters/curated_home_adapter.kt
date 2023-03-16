@@ -1,12 +1,15 @@
 package com.example.influencers_app.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.influencers_app.R
+import com.example.influencers_app.activities.campaign_details
 import com.example.influencers_app.models.curated_data_home
 
 class curated_home_adapter(val datalist:MutableList<curated_data_home>): RecyclerView.Adapter<curated_home_adapter.viewHolder>() {
@@ -21,6 +24,11 @@ class curated_home_adapter(val datalist:MutableList<curated_data_home>): Recycle
         holder.bgimg.setImageResource(data.bg_img)
         holder.logoimg.setImageResource(data.logo_img)
         holder.catg_name.text = data.catg_name
+
+        holder.cardv.setOnClickListener {
+            val intent: Intent = Intent(holder.bgimg.context, campaign_details::class.java)
+            holder.bgimg.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -28,7 +36,7 @@ class curated_home_adapter(val datalist:MutableList<curated_data_home>): Recycle
     }
 
     class viewHolder( var itemview: View): RecyclerView.ViewHolder(itemview) {
-
+        var cardv = itemview.findViewById<CardView>(R.id.curated_card)
         var bgimg = itemview.findViewById<ImageView>(R.id.banner_curated)
         var logoimg = itemview.findViewById<ImageView>(R.id.logo_curated_lnout)
         var catg_name = itemview.findViewById<TextView>(R.id.camp_catg)

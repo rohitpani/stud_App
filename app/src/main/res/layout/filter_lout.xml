@@ -5,385 +5,405 @@
     android:background="@drawable/campg_filter_dialog_bg"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.core.widget.NestedScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="87dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="19dp"
+                            android:layout_alignParentStart="true">
+
+                            <TextView
+                                android:id="@+id/featured_campaign"
+                                android:layout_width="wrap_content"
+                                android:layout_height="24dp"
+                                android:layout_marginTop="5.09dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:lineHeight="24dp"
+                                android:text="Filter"
+                                android:textColor="#1E1E1E"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                android:layout_width="133.74dp"
+                                android:layout_height="2.55dp"
+                                android:layout_marginTop="3.04dp"
+                                app:tint="#B6A6FF"
+                                android:src="@drawable/dashed_line" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/filter_cancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cancel"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="27.44dp"
+                            android:layout_marginEnd="30dp"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Campaign Type"
+                    android:textColor="#1E1E1E"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:textSize="14dp"/>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/campg_type_filter_recv"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="16dp"/>
+                <!--        <com.google.android.flexbox.FlexboxLayout-->
+                <!--            android:layout_width="match_parent"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            app:flexWrap="wrap"-->
+                <!--            app:alignContent="flex_start"-->
+                <!--            android:id="@+id/reference_frag_lnout4"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/reference_frag_lnout3"-->
+                <!--            app:layout_constraintLeft_toLeftOf="parent"-->
+                <!--            app:layout_constraintRight_toRightOf="parent"-->
+                <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--            android:layout_marginTop="15dp"-->
+                <!--            android:layout_marginLeft="16dp"-->
+                <!--            android:layout_marginRight="13dp">-->
+
+                <!--            <TextView-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:background="@drawable/campaign_type_blue_bg"-->
+                <!--                android:fontFamily="@font/poppins"-->
+                <!--                android:text="Advocacy"-->
+                <!--                android:textSize="12dp"-->
+                <!--                android:textColor="#FFFFFF"-->
+                <!--                android:textAlignment="center"-->
+                <!--                android:layout_margin="4dp"-->
+                <!--                android:gravity="center"/>-->
+
+                <!--            <TextView-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:background="@drawable/campaign_type_border_bg"-->
+                <!--                android:fontFamily="@font/poppins"-->
+                <!--                android:text="Review"-->
+                <!--                android:textSize="12dp"-->
+                <!--                android:textColor="#1E1E1E"-->
+                <!--                android:gravity="center"-->
+                <!--                android:textAlignment="center"-->
+                <!--                android:layout_margin="4dp"-->
+                <!--                />-->
+
+                <!--            <TextView-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:background="@drawable/campaign_type_border_bg"-->
+                <!--                android:fontFamily="@font/poppins"-->
+                <!--                android:text="Collaboration"-->
+                <!--                android:textSize="12dp"-->
+                <!--                android:textColor="#1E1E1E"-->
+                <!--                android:layout_margin="4dp"-->
+                <!--                android:textAlignment="center"-->
+                <!--                android:gravity="center"/>-->
+
+                <!--        </com.google.android.flexbox.FlexboxLayout>-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/filters_campg_frag_line1"
+                    android:background="#F5F5F5"
+                    android:layout_marginTop="11dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Social Media Type"
+                    android:textColor="#1E1E1E"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:textSize="14dp"/>
+
+                <LinearLayout
+                    android:id="@+id/social_media_lout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="11.84dp"
+                    android:layout_marginLeft="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/insta_lnout_filter"
+                        android:layout_width="41.03dp"
+                        android:layout_height="40.21dp"
+                        android:layout_marginRight="14dp"
+                        android:gravity="center"
+                        android:background="@drawable/social_media_bg"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="27dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/instagram" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/youtube_lnout_filter"
+                        android:layout_width="41.03dp"
+                        android:layout_height="40.21dp"
+                        android:layout_marginRight="14dp"
+                        android:gravity="center"
+                        android:background="@drawable/social_media_bg"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="21dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/youtube" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/filters_campg_frag_line2"
+                    android:background="#F5F5F5"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pricing Type"
+                    android:textColor="#1E1E1E"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:textSize="14dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pricing_type_filter_recv"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="16dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/filters_campg_frag_line3"
+                    android:background="#F5F5F5"
+                    android:layout_marginTop="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Brands"
+                            android:textColor="#1E1E1E"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="16dp"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:layout_alignParentEnd="true"
+                            android:lineHeight="18dp"
+                            android:text="@string/View_all"
+                            android:textColor="#552FFF"
+                            android:textSize="12dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="20dp"/>
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/brands_filter_recv"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/filters_campg_frag_line4"
+                    android:background="#F5F5F5"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Interests"
+                    android:textColor="#1E1E1E"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:textSize="14dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/interests_filter_recv"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/filters_campg_frag_line5"
+                    android:background="#F5F5F5"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Language"
+                    android:textColor="#1E1E1E"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:textSize="14dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/language_filter_recv"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/filters_campg_frag_line6"
+                    android:background="#F5F5F5"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Age Range"
+                    android:textColor="#1E1E1E"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:textSize="14dp"/>
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:id="@+id/age_seek"
+                    android:min="16"
+                    android:max="55"
+                    android:layout_marginLeft="14.5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="12dp"
+                    android:progressDrawable="@drawable/seek_bar"
+                    android:thumb="@drawable/seek_thumb" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="19dp"
-                        android:layout_alignParentStart="true">
-
-                        <TextView
-                            android:id="@+id/featured_campaign"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:layout_marginTop="5.09dp"
-                            android:fontFamily="@font/poppins_semibold"
-                            android:lineHeight="24dp"
-                            android:text="Filter"
-                            android:textColor="#1E1E1E"
-                            android:textSize="16dp" />
-
-                        <ImageView
-                            android:layout_width="133.74dp"
-                            android:layout_height="2.55dp"
-                            android:layout_marginTop="3.04dp"
-                            app:tint="#B6A6FF"
-                            android:src="@drawable/dashed_line" />
-
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/filter_cancel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/cancel"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginTop="27.44dp"
-                        android:layout_marginEnd="30dp"/>
-
-                </RelativeLayout>
-
-
-            </LinearLayout>
-
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentBottom="true">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Campaign Type"
-                android:textColor="#1E1E1E"
-                android:fontFamily="@font/poppins_medium"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="16dp"
-                android:textSize="14dp"/>
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/campg_type_filter_recv"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="16dp"/>
-            <!--        <com.google.android.flexbox.FlexboxLayout-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            app:flexWrap="wrap"-->
-            <!--            app:alignContent="flex_start"-->
-            <!--            android:id="@+id/reference_frag_lnout4"-->
-            <!--            app:layout_constraintTop_toBottomOf="@+id/reference_frag_lnout3"-->
-            <!--            app:layout_constraintLeft_toLeftOf="parent"-->
-            <!--            app:layout_constraintRight_toRightOf="parent"-->
-            <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--            android:layout_marginTop="15dp"-->
-            <!--            android:layout_marginLeft="16dp"-->
-            <!--            android:layout_marginRight="13dp">-->
-
-            <!--            <TextView-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:background="@drawable/campaign_type_blue_bg"-->
-            <!--                android:fontFamily="@font/poppins"-->
-            <!--                android:text="Advocacy"-->
-            <!--                android:textSize="12dp"-->
-            <!--                android:textColor="#FFFFFF"-->
-            <!--                android:textAlignment="center"-->
-            <!--                android:layout_margin="4dp"-->
-            <!--                android:gravity="center"/>-->
-
-            <!--            <TextView-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:background="@drawable/campaign_type_border_bg"-->
-            <!--                android:fontFamily="@font/poppins"-->
-            <!--                android:text="Review"-->
-            <!--                android:textSize="12dp"-->
-            <!--                android:textColor="#1E1E1E"-->
-            <!--                android:gravity="center"-->
-            <!--                android:textAlignment="center"-->
-            <!--                android:layout_margin="4dp"-->
-            <!--                />-->
-
-            <!--            <TextView-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:background="@drawable/campaign_type_border_bg"-->
-            <!--                android:fontFamily="@font/poppins"-->
-            <!--                android:text="Collaboration"-->
-            <!--                android:textSize="12dp"-->
-            <!--                android:textColor="#1E1E1E"-->
-            <!--                android:layout_margin="4dp"-->
-            <!--                android:textAlignment="center"-->
-            <!--                android:gravity="center"/>-->
-
-            <!--        </com.google.android.flexbox.FlexboxLayout>-->
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:id="@+id/filters_campg_frag_line1"
-                android:background="#F5F5F5"
-                android:layout_marginTop="11dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Social Media Type"
-                android:textColor="#1E1E1E"
-                android:fontFamily="@font/poppins_medium"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="16dp"
-                android:textSize="14dp"/>
-
-            <LinearLayout
-                android:id="@+id/social_media_lout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="47dp"
+                android:layout_weight="1"
+                android:id="@+id/clearAll_btn_Filter"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/border_bg_blue"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Clear All"
+                android:textColor="@color/blue"
+                android:textSize="13dp"
                 android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_marginTop="11.84dp"
-                android:layout_marginLeft="20dp">
-
-                <LinearLayout
-                    android:layout_width="41.03dp"
-                    android:layout_height="40.21dp"
-                    android:layout_marginRight="14dp"
-                    android:gravity="center"
-                    android:background="@drawable/social_media_bg"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="27dp"
-                        android:layout_height="28dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/instagram" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="41.03dp"
-                    android:layout_height="40.21dp"
-                    android:layout_marginRight="14dp"
-                    android:gravity="center"
-                    android:background="@drawable/social_media_bg"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="21dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/youtube" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:id="@+id/filters_campg_frag_line2"
-                android:background="#F5F5F5"
-                android:layout_marginTop="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pricing Type"
-                android:textColor="#1E1E1E"
-                android:fontFamily="@font/poppins_medium"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="16dp"
-                android:textSize="14dp"/>
-
-            <com.google.android.flexbox.FlexboxLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:flexWrap="wrap"
-                app:alignContent="flex_start"
-                android:id="@+id/reference_frag_lnout4"
-                app:layout_constraintTop_toBottomOf="@+id/reference_frag_lnout3"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="13dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/campaign_type_border_bg"
-                    android:fontFamily="@font/poppins"
-                    android:text="Barter"
-                    android:textSize="12dp"
-                    android:textColor="#1E1E1E"
-                    android:gravity="center"
-                    android:textAlignment="center"
-                    android:layout_margin="4dp"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/campaign_type_blue_bg"
-                    android:fontFamily="@font/poppins"
-                    android:text="Paid"
-                    android:textSize="12dp"
-                    android:textColor="#FFFFFF"
-                    android:textAlignment="center"
-                    android:layout_margin="4dp"
-                    android:gravity="center"/>
-
-            </com.google.android.flexbox.FlexboxLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:id="@+id/filters_campg_frag_line3"
-                android:background="#F5F5F5"
-                android:layout_marginTop="16dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Brands"
-                        android:textColor="#1E1E1E"
-                        android:fontFamily="@font/poppins_medium"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="16dp"
-                        android:textSize="14dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="18dp"
-                        android:layout_alignParentEnd="true"
-                        android:lineHeight="18dp"
-                        android:text="@string/View_all"
-                        android:textColor="#552FFF"
-                        android:textSize="12dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginRight="20dp"/>
-
-
-                </RelativeLayout>
-            </LinearLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/brands_filter_recv"
-                android:layout_marginTop="11dp"
-                android:layout_marginLeft="20dp"
-                android:orientation="horizontal"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:id="@+id/filters_campg_frag_line4"
-                android:background="#F5F5F5"
-                android:layout_marginTop="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Interests"
-                android:textColor="#1E1E1E"
-                android:fontFamily="@font/poppins_medium"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="16dp"
-                android:textSize="14dp"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/interests_filter_recv"
-                android:layout_marginTop="11dp"
-                android:layout_marginLeft="20dp"
-                android:orientation="horizontal"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:id="@+id/filters_campg_frag_line5"
-                android:background="#F5F5F5"
-                android:layout_marginTop="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Language"
-                android:textColor="#1E1E1E"
-                android:fontFamily="@font/poppins_medium"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="16dp"
-                android:textSize="14dp"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/language_filter_recv"
-                android:layout_marginTop="11dp"
-                android:layout_marginLeft="20dp"
-                android:orientation="horizontal"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:id="@+id/filters_campg_frag_line6"
-                android:background="#F5F5F5"
-                android:layout_marginTop="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Age Range"
-                android:textColor="#1E1E1E"
-                android:fontFamily="@font/poppins_medium"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="16dp"
-                android:textSize="14dp"/>
-            
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:id="@+id/age_seek"
-                android:layout_marginLeft="11.5dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="12dp"
-                android:progressDrawable="@drawable/progress"
-                android:thumb="@drawable/thumb"/>
-
+                android:textAllCaps="false" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="47dp"
+                android:layout_weight="1"
+                android:id="@+id/apply_btn_Filter"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/button_bg"
+                android:drawableRight="@drawable/arrow_long_right"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Apply"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:paddingRight="10dp"
+                android:paddingLeft="25dp"
+                android:gravity="center"
+                android:textAllCaps="false" />
         </LinearLayout>
 
-    </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

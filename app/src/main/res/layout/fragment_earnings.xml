@@ -3,8 +3,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.EarningsFragment">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp">
 
+                <TextView
+                    android:id="@+id/featured_campaign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="5.09dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineHeight="24dp"
+                    android:text="My Earnings"
+                    android:textColor="#1E1E1E"
+                    android:textSize="16dp" />
 
+                <ImageView
+                    android:layout_width="133.74dp"
+                    android:layout_height="2.55dp"
+                    android:layout_marginTop="3.04dp"
+                    app:tint="#B6A6FF"
+                    android:src="@drawable/dashed_line" />
+
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/blue">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="10dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentLeft="true">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Earnings :"
+                            android:textSize="16dp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins_medium"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pragati_narrow_bold"
+                            android:text="₹ 28,000"
+                            android:textColor="@color/white"
+                            android:textSize="24dp" />
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/filter_btn_my_earnings"
+                        android:layout_width="46dp"
+                        android:layout_height="41.71dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/active_campg_bg"
+                        android:padding="11dp"
+                        android:src="@drawable/filter" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/search_edit_my_earnings"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight = "16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_toStartOf="@+id/filter_btn_campaign_listing"
+                    android:background="@drawable/active_campg_bg"
+                    android:drawableLeft="@drawable/search"
+                    android:drawablePadding="16dp"
+                    android:hint="Search Transaction"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="10dp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/my_earnings_recv"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="13dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>
