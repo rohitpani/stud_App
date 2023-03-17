@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.my_applications">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="28dp"
+                android:id="@+id/deliverable_details_back_btn"
+                android:src="@drawable/backward_arrow"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/my_applications_lout1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/deliverable_details_back_btn"
+                android:layout_marginLeft="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:id="@+id/about_brand"
+                    android:textSize="16dp"
+                    android:lineHeight="24dp"
+                    android:textColor="#1E1E1E"
+                    android:text="My Applications"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="13dp"/>
+
+                <ImageView
+                    android:layout_width="133.74dp"
+                    android:layout_height="2.55dp"
+                    android:src="@drawable/dashed_line"
+                    android:layout_marginLeft="14.78dp"
+                    android:layout_marginTop="3.04dp"
+                    app:tint="#B6A6FF" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/myapplication_line1"
+                android:background="#F5F5F5"
+                android:layout_marginTop="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_applications_lout1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="13dp"
+                android:orientation="horizontal"
+                android:id="@+id/my_applications_lout2"
+                app:layout_constraintTop_toBottomOf="@id/my_applications_lout1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/search_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:textSize="15dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="11dp"
+                        android:layout_toStartOf="@+id/search_btn_my_applications"
+                        android:background="@drawable/active_campg_bg"
+                        android:drawableLeft="@drawable/search"
+                        android:drawablePadding="16dp"
+                        android:hint="Search Application"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="10dp" />
+
+                    <ImageView
+                        android:id="@+id/search_btn_my_applications"
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/active_campg_bg"
+                        android:padding="11dp"
+                        android:src="@drawable/filter" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/my_applications_recv"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/my_applications_lout2"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="10dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

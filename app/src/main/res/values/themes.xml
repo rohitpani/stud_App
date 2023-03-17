@@ -23,6 +23,6 @@
     </style>
 
     <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@drawable/campg_filter_dialog_bg</item>
+        <item name="android:background">@drawable/filter_dialog_bg</item>
     </style>
 </resources>
