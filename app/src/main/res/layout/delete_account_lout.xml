@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/filter_dialog_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="18dp"
+            android:id="@+id/logout_tag">
+
+            <TextView
+                android:id="@+id/featured_campaign"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="5.09dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:lineHeight="24dp"
+                android:text="Delete Account"
+                android:layout_gravity="center"
+                android:textColor="#1E1E1E"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="133.74dp"
+                android:layout_height="2.55dp"
+                android:layout_marginTop="3.04dp"
+                android:src="@drawable/dashed_line"
+                app:tint="#FE7062" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are you sure you want to Delete your Account?"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:textColor="#1E1E1E"
+            android:textSize="14dp"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This will delete all the data from this account"
+            android:layout_gravity="center"
+            android:textColor="#898D9E"
+            android:textSize="12dp"
+            android:fontFamily="@font/poppins"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/logout_line1"
+            android:background="#F5F5F5"
+            android:layout_marginTop="34dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_alignParentBottom="true">
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="47dp"
+                android:layout_weight="1"
+                android:id="@+id/cancel_btn_delete_account_dialog"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Cancel"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textAllCaps="false" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="47dp"
+                android:layout_weight="1"
+                android:id="@+id/delete_btn_delete_account_dialog"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_bg_blue"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Delete"
+                android:textColor="@color/blue"
+                android:textSize="13dp"
+                android:gravity="center"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

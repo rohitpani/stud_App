@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.billing_Details">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/billing_details_lnout1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="6dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="28dp"
+                    android:id="@+id/billing_details_back_btn"
+                    android:src="@drawable/backward_arrow"
+                    android:layout_alignParentStart="true"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/billing_details_lnout2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/billing_details_back_btn"
+                    android:layout_marginLeft="29dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:id="@+id/about_brand"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textColor="#1E1E1E"
+                        android:text="Billing Details"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="13dp"/>
+
+                    <ImageView
+                        android:layout_width="133.74dp"
+                        android:layout_height="2.55dp"
+                        android:src="@drawable/dashed_line"
+                        android:layout_marginLeft="14.78dp"
+                        android:layout_marginTop="3.04dp"
+                        app:tint="#B6A6FF" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/billing_details_edit_icon"
+                    android:src="@drawable/edit_icon"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop = "20dp"
+                    android:layout_marginRight="13dp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/billing_details_line1"
+                android:background="#F5F5F5"
+                android:layout_marginTop="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/billing_details_lnout1"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/billing_details_line1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="25.61dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="21dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Company Name"
+                            android:textSize="14dp"
+                            android:lineHeight="21dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor = "#1E1E1E"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/views_bg">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="21dp"
+                            android:background="#F9F7FF"
+                            android:layout_gravity="center"
+                            android:paddingLeft="15dp"
+                            android:textSize="14dp"
+                            android:hint="Enter your Company Name"
+                            android:paddingRight="15dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="25.61dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="21dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="GST No."
+                            android:textSize="14dp"
+                            android:lineHeight="21dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor = "#1E1E1E"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/views_bg">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="21dp"
+                            android:background="#F9F7FF"
+                            android:layout_gravity="center"
+                            android:paddingLeft="15dp"
+                            android:textSize="14dp"
+                            android:hint="GST No."
+                            android:paddingRight="15dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="25.61dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="21dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Billing Address"
+                            android:textSize="14dp"
+                            android:lineHeight="21dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor = "#1E1E1E"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/views_bg">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="21dp"
+                            android:background="#F9F7FF"
+                            android:layout_gravity="center"
+                            android:paddingLeft="15dp"
+                            android:textSize="14dp"
+                            android:hint="Billing Address"
+                            android:paddingRight="15dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="25.61dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="21dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Bank Details"
+                            android:textSize="14dp"
+                            android:lineHeight="21dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor = "#1E1E1E"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/views_bg">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="21dp"
+                            android:background="#F9F7FF"
+                            android:layout_gravity="center"
+                            android:paddingLeft="15dp"
+                            android:textSize="14dp"
+                            android:hint="Bank Name"
+                            android:paddingRight="15dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/views_bg">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="21dp"
+                            android:background="#F9F7FF"
+                            android:layout_gravity="center"
+                            android:paddingLeft="15dp"
+                            android:textSize="14dp"
+                            android:hint="Account Name"
+                            android:paddingRight="15dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/views_bg">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="21dp"
+                            android:background="#F9F7FF"
+                            android:layout_gravity="center"
+                            android:paddingLeft="15dp"
+                            android:textSize="14dp"
+                            android:hint="Account Number"
+                            android:paddingRight="15dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/views_bg">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="21dp"
+                            android:background="#F9F7FF"
+                            android:layout_gravity="center"
+                            android:paddingLeft="15dp"
+                            android:textSize="14dp"
+                            android:hint="IFSC Code"
+                            android:paddingRight="15dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/views_bg">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="21dp"
+                            android:background="#F9F7FF"
+                            android:layout_gravity="center"
+                            android:paddingLeft="15dp"
+                            android:textSize="14dp"
+                            android:hint="Branch Name"
+                            android:paddingRight="15dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/save_details_btn_bill_details"
+                    android:background="@drawable/button_bg"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Save Details"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:textAllCaps="false" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

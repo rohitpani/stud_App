@@ -215,7 +215,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
                         android:background="#F9F7FF"
-                        android:drawableLeft="@drawable/username"
+                        android:drawableLeft="@drawable/locked"
                         android:layout_gravity="center"
                         android:drawablePadding="7dp"
                         android:paddingLeft="15dp"

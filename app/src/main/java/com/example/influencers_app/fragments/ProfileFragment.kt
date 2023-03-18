@@ -8,8 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import com.example.influencers_app.R
-import com.example.influencers_app.activities.get_started
-import com.example.influencers_app.activities.my_applications
+import com.example.influencers_app.activities.*
 import com.example.influencers_app.utils.BottomSheetDialogCampgFilter
 import com.example.influencers_app.utils.LogoutDialog
 
@@ -45,6 +44,20 @@ class ProfileFragment : Fragment() {
             startActivity(intent)
         }
 
+        change_pswd_btn.setOnClickListener {
+            val intent: Intent = Intent(activity, change_password::class.java)
+            startActivity(intent)
+        }
+
+        billiing_details_btn.setOnClickListener {
+            val intent: Intent = Intent(activity, billing_Details::class.java)
+            startActivity(intent)
+        }
+
+        settings_btn.setOnClickListener {
+            val intent: Intent = Intent(activity, settings::class.java)
+            startActivity(intent)
+        }
 
         return view
     }

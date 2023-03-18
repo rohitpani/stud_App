@@ -39,7 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
                     android:id="@+id/about_brand"
-                    android:textSize="16dp"
+                    android:textSize="18dp"
                     android:lineHeight="24dp"
                     android:textColor="#1E1E1E"
                     android:text="Deliverables"

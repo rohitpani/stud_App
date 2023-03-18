@@ -12,6 +12,21 @@
         android:theme="@style/Theme.Influencers_App"
         tools:targetApi="31">
         <activity
+            android:name=".activities.AboutUs"
+            android:exported="false" />
+        <activity
+            android:name=".activities.privacy_policy"
+            android:exported="false" />
+        <activity
+            android:name=".activities.termsAndConditions"
+            android:exported="false" />
+        <activity
+            android:name=".activities.settings"
+            android:exported="false" />
+        <activity
+            android:name=".activities.billing_Details"
+            android:exported="false" />
+        <activity
             android:name=".activities.change_password"
             android:exported="false" />
         <activity

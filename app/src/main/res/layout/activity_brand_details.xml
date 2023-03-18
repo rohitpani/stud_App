@@ -39,7 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
                     android:id="@+id/about_brand"
-                    android:textSize="16dp"
+                    android:textSize="18dp"
                     android:lineHeight="24dp"
                     android:textColor="#1E1E1E"
                     android:text="About the Brand"
@@ -173,7 +173,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15.15dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/brand_detail_bg"
+                android:background="@drawable/detail_bg"
                 android:orientation="vertical"
                 android:paddingTop="18dp"
                 android:paddingBottom="18dp">

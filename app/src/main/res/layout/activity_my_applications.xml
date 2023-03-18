@@ -74,7 +74,7 @@
                 android:layout_margin="13dp"
                 android:orientation="horizontal"
                 android:id="@+id/my_applications_lout2"
-                app:layout_constraintTop_toBottomOf="@id/my_applications_lout1"
+                app:layout_constraintTop_toBottomOf="@id/myapplication_line1"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent">
 
