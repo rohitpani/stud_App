@@ -16,7 +16,7 @@
 
     <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
         <item name="android:fontFamily">@font/poppins_semibold</item>
-        <item name="android:textSize">16dp</item>
+        <item name="android:textSize">14dp</item>
     </style>
     <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>

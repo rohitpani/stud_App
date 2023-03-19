@@ -42,6 +42,10 @@ class settings : AppCompatActivity() {
             val intent: Intent = Intent(this, AboutUs::class.java)
             startActivity(intent)
         }
+        faq_btn.setOnClickListener {
+            val intent: Intent = Intent(this, FAQ_Activity::class.java)
+            startActivity(intent)
+        }
 
     }
 

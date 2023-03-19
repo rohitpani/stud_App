@@ -40,6 +40,7 @@ class welcome : AppCompatActivity() {
         skip_tv.setOnClickListener{
             val intent: Intent = Intent(this,homepage::class.java)
             startActivity(intent)
+            finishAffinity()
         }
 
         proceed_btn.setOnClickListener {
