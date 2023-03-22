@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/filter_dialog_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/earnings_filter_lout1"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="19dp"
+                        android:layout_alignParentStart="true">
+
+                        <TextView
+                            android:id="@+id/featured_campaign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:layout_marginTop="5.09dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:lineHeight="24dp"
+                            android:text="Filter Payment Activity"
+                            android:textColor="#1E1E1E"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:layout_width="133.74dp"
+                            android:layout_height="2.55dp"
+                            android:layout_marginTop="3.04dp"
+                            app:tint="#B6A6FF"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/dashed_line" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/filter_cancel_EarningsDialog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/cancel"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="27.44dp"
+                        android:layout_marginEnd="5dp"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/featured_campaign"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="8.09dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:lineHeight="24dp"
+                android:text="By Date"
+                android:textColor="#1E1E1E"
+                android:textSize="14dp" />
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.79dp">
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:background="@drawable/views_bg">-->
+
+                    <RadioButton
+                        android:id="@+id/all_activities"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/views_bg"
+                        android:text="All Activities"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="14dp"
+                        android:checked="true"
+                        android:paddingLeft="9.03dp"
+                        android:buttonTint="#552FFF"
+                        android:textColor="#1E1E1E"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/last_1_month"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Last 1 Month"
+                        android:background="@drawable/radio_btn_bg"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="14dp"
+                        android:paddingLeft="9.03dp"
+                        android:buttonTint="#552FFF"
+                        android:textColor="#1E1E1E"
+                        android:layout_marginTop="8dp"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/last_3_month"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/radio_btn_bg"
+                        android:text="Last 3 Months"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="14dp"
+                        android:paddingLeft="9.03dp"
+                        android:buttonTint="#552FFF"
+                        android:textColor="#1E1E1E"
+                        android:layout_marginTop="8dp"
+                        />
+
+
+                    <RadioButton
+                        android:id="@+id/last_6_month"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Last 6 Months"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="14dp"
+                        android:paddingLeft="9.03dp"
+                        android:buttonTint="#552FFF"
+                        android:textColor="#1E1E1E"
+                        android:background="@drawable/radio_btn_bg"
+                        android:layout_marginTop="8dp"
+                        />
+
+
+
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/earnings_filter_lout1">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="47dp"
+                android:layout_weight="1"
+                android:id="@+id/clearAll_btn_EarningsFilter"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/border_bg_blue"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Clear All"
+                android:textColor="@color/blue"
+                android:textSize="13dp"
+                android:gravity="center"
+                android:textAllCaps="false" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="47dp"
+                android:layout_weight="1"
+                android:id="@+id/apply_btn_EarningsFilter"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/button_bg"
+                android:drawableRight="@drawable/arrow_long_right"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Apply"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:paddingRight="10dp"
+                android:paddingLeft="25dp"
+                android:gravity="center"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

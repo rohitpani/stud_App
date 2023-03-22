@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.complete_campaign">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/complete_campg_back_btn"
+                android:layout_width="6dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="28dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/backward_arrow"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/complete_campg_lout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="@id/complete_campg_back_btn"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/complete_campg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineHeight="24dp"
+                    android:text="Complete your Campaign"
+                    android:textColor="#1E1E1E"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:layout_width="133.74dp"
+                    android:layout_height="2.55dp"
+                    android:layout_marginLeft="14.78dp"
+                    android:layout_marginTop="3.04dp"
+                    android:src="@drawable/dashed_line"
+                    app:tint="#B6A6FF" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/complete_campg_line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="#F5F5F5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/complete_campg_lout1" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/insta_campg_comp_lout"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/complete_campg_line1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F9F7FF">
+
+                    <LinearLayout
+                        android:id="@+id/insta_lnout"
+                        android:layout_width="42.66dp"
+                        android:layout_height="42.81dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/social_media_bg"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="28.79dp"
+                            android:layout_height="29.64dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/instagram" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/insta_campg_complete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Instagram"
+                        android:textColor="#1E1E1E"
+                        android:textSize="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/insta_lnout"
+                        android:layout_marginLeft="15dp"
+                        android:background="#F9F7FF"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/plus_btn_insta_cont_add"
+                        android:src="@drawable/faq_plus"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_alignParentRight="true"/>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/insta_content_lnout">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="30dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Instagram Story Link "
+                                android:textSize="14dp"
+                                android:lineHeight="21dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="@color/light_black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:lineHeight="21dp"
+                                android:textColor="@color/red"
+                                android:layout_marginLeft="3dp"/>
+                        </LinearLayout>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="www.loremipsum.com"
+                            android:textSize="14dp"
+                            android:textColor="#AFAFAF"
+                            android:textColorHint="#AFAFAF"
+                            android:background="@drawable/social_media_tv_bg"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="6dp"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:fontFamily="@font/poppins_medium"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Instagram Post Link "
+                                android:textSize="14dp"
+                                android:lineHeight="21dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="@color/light_black"/>
+                        </LinearLayout>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="www.loremipsum.com"
+                            android:textSize="14dp"
+                            android:textColorHint="#AFAFAF"
+                            android:textColor="#AFAFAF"
+                            android:background="@drawable/social_media_tv_bg"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="6dp"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:fontFamily="@font/poppins_medium"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Instagram Reel Link"
+                                android:textSize="14dp"
+                                android:lineHeight="21dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="@color/light_black"/>
+                        </LinearLayout>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="www.loremipsum.com"
+                            android:textSize="14dp"
+                            android:textColor="#AFAFAF"
+                            android:textColorHint="#AFAFAF"
+                            android:background="@drawable/social_media_tv_bg"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="6dp"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:fontFamily="@font/poppins_medium"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/utube_campg_comp_lout"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/insta_campg_comp_lout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F9F7FF">
+
+                    <LinearLayout
+                        android:id="@+id/youtube_lnout"
+                        android:layout_width="42.66dp"
+                        android:layout_height="42.81dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/social_media_bg"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="21.32dp"
+                            android:layout_height="22.18dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/youtube" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/utube_campg_complete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="YouTube"
+                        android:textColor="#1E1E1E"
+                        android:textSize="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/youtube_lnout"
+                        android:layout_marginLeft="15dp"
+                        android:background="#F9F7FF"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/plus_btn_utube_cont_add"
+                        android:src="@drawable/faq_plus"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_alignParentRight="true"/>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/utube_content_lnout">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="30dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Youtube Shorts "
+                                android:textSize="14dp"
+                                android:lineHeight="21dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="@color/light_black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:lineHeight="21dp"
+                                android:textColor="@color/red"
+                                android:layout_marginLeft="3dp"/>
+                        </LinearLayout>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="www.loremipsum.com"
+                            android:textSize="14dp"
+                            android:textColor="#AFAFAF"
+                            android:textColorHint="#AFAFAF"
+                            android:background="@drawable/social_media_tv_bg"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="6dp"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:fontFamily="@font/poppins_medium"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Youtube Video "
+                                android:textSize="14dp"
+                                android:lineHeight="21dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="@color/light_black"/>
+                        </LinearLayout>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="www.loremipsum.com"
+                            android:textSize="14dp"
+                            android:textColorHint="#AFAFAF"
+                            android:textColor="#AFAFAF"
+                            android:background="@drawable/social_media_tv_bg"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="6dp"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:fontFamily="@font/poppins_medium"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submit_btn_complete_campaign"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_margin="40dp"
+                android:layout_marginTop="52dp"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/utube_campg_comp_lout"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

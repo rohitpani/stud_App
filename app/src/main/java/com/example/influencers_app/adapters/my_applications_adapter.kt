@@ -1,13 +1,17 @@
 package com.example.influencers_app.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.influencers_app.R
+import com.example.influencers_app.activities.application_status
+import com.example.influencers_app.activities.campaign_details
 import com.example.influencers_app.activities.my_applications
 import com.example.influencers_app.models.my_applications_data
 
@@ -20,6 +24,7 @@ class my_applications_adapter(val datalist:MutableList<my_applications_data>):Re
         var application_status = itemView.findViewById<TextView>(R.id.my_application_status)
         var chat_icon = itemView.findViewById<ImageView>(R.id.chat_icon_my_application_card)
         var view_brief = itemView.findViewById<TextView>(R.id.view_brief_my_application)
+        var cardv = itemView.findViewById<CardView>(R.id.my_application_cardv)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
@@ -55,6 +60,15 @@ class my_applications_adapter(val datalist:MutableList<my_applications_data>):Re
         else if(data.application_status.equals("Completed")){
             holder.application_status.setTextColor(holder.application_status.context.resources.getColor(R.color.green))
             holder.application_status.background = holder.application_status.context.resources.getDrawable(R.drawable.green_bg_application_status)
+        }
+
+        holder.cardv.setOnClickListener {
+            val intent: Intent = Intent(holder.cardv.context, application_status::class.java)
+            intent.putExtra("brand_name",data.brand_name)
+            intent.putExtra("brand_logo",data.img)
+            intent.putExtra("application_status",data.application_status)
+            intent.putExtra("application_date",data.application_date)
+            holder.cardv.context.startActivity(intent)
         }
 
     }

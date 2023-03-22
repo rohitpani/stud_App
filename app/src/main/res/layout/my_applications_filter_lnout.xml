@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/filter_dialog_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/my_applications_filter_lout1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="19dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/featured_campaign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:layout_marginTop="5.09dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:lineHeight="24dp"
+                            android:text="My Applications"
+                            android:textColor="#1E1E1E"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:layout_width="133.74dp"
+                            android:layout_height="2.55dp"
+                            android:layout_marginTop="3.04dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/dashed_line"
+                            app:tint="#B6A6FF" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/filter_cancel_MyApplicationsDialog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="27.44dp"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/cancel" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <RadioGroup
+                android:id="@+id/radio_group_application_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.79dp">
+
+                <RadioButton
+                    android:id="@+id/applied_applications"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/radio_btn_bg"
+                    android:text="Applied"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14dp"
+                    android:paddingLeft="9.03dp"
+                    android:buttonTint="#552FFF"
+                    android:textColor="#1E1E1E"
+                    />
+
+                <RadioButton
+                    android:id="@+id/in_progress_applications"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="In Progress"
+                    android:background="@drawable/radio_btn_bg"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14dp"
+                    android:paddingLeft="9.03dp"
+                    android:buttonTint="#552FFF"
+                    android:textColor="#1E1E1E"
+                    android:layout_marginTop="8dp"
+                    />
+
+                <RadioButton
+                    android:id="@+id/pending_applications"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/radio_btn_bg"
+                    android:text="Pending"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14dp"
+                    android:paddingLeft="9.03dp"
+                    android:buttonTint="#552FFF"
+                    android:textColor="#1E1E1E"
+                    android:layout_marginTop="8dp"
+                    />
+
+
+                <RadioButton
+                    android:id="@+id/rejected_applications"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Rejected"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14dp"
+                    android:paddingLeft="9.03dp"
+                    android:buttonTint="#552FFF"
+                    android:textColor="#1E1E1E"
+                    android:background="@drawable/radio_btn_bg"
+                    android:layout_marginTop="8dp"
+                    />
+
+                <RadioButton
+                    android:id="@+id/completed_applications"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Completed"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14dp"
+                    android:paddingLeft="9.03dp"
+                    android:buttonTint="#552FFF"
+                    android:textColor="#1E1E1E"
+                    android:background="@drawable/radio_btn_bg"
+                    android:layout_marginTop="8dp"
+                    />
+
+
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/my_applications_filter_lout1"
+            android:id="@+id/my_applications_frag_line1"
+            android:background="#F5F5F5"
+            android:layout_marginTop="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/my_applications_filter_lout2"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/my_applications_frag_line1">
+
+            <TextView
+                android:id="@+id/featured_campaign"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="10.09dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:lineHeight="24dp"
+                android:text="Time Filter"
+                android:textColor="#1E1E1E"
+                android:textSize="14dp" />
+
+            <RadioGroup
+                android:id="@+id/radio_group_time_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.79dp">
+
+                <RadioButton
+                    android:id="@+id/last_7_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/radio_btn_bg"
+                    android:text="Last 7 Days"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14dp"
+                    android:paddingLeft="9.03dp"
+                    android:buttonTint="#552FFF"
+                    android:textColor="#1E1E1E"
+                    />
+
+                <RadioButton
+                    android:id="@+id/last_30_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Last 30 Days"
+                    android:background="@drawable/radio_btn_bg"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14dp"
+                    android:paddingLeft="9.03dp"
+                    android:buttonTint="#552FFF"
+                    android:textColor="#1E1E1E"
+                    android:layout_marginTop="8dp"
+                    />
+
+                <RadioButton
+                    android:id="@+id/custom_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/radio_btn_bg"
+                    android:text="Custom Date"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14dp"
+                    android:paddingLeft="9.03dp"
+                    android:buttonTint="#552FFF"
+                    android:textColor="#1E1E1E"
+                    android:layout_marginTop="8dp"
+                    />
+
+            </RadioGroup>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/custom_date_lnout"
+                android:weightSum="2"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                android:gravity="center">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.95">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.19"
+                        android:text="From"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#1E1E1E"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:id="@+id/from_date"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/select_date_bg"
+                        android:text="Select Date"
+                        android:drawableLeft="@drawable/calendar_icon"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:drawablePadding="15dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12dp"
+                        android:gravity="center"
+                        android:textColor="#1E1E1E"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.10"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.95">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text="To"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#1E1E1E"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:id="@+id/to_date"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/select_date_bg"
+                        android:text="Select Date"
+                        android:drawableLeft="@drawable/calendar_icon"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:drawablePadding="15dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12dp"
+                        android:gravity="center"
+                        android:textColor="#1E1E1E"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/filters_campg_frag_line2"
+            android:background="#F5F5F5"
+            android:layout_below="@id/my_applications_filter_lout2"
+            android:layout_marginTop="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/filters_campg_frag_line2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="47dp"
+                android:layout_weight="1"
+                android:id="@+id/clearAll_btn_MyApplicationsFilter"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/border_bg_blue"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Clear All"
+                android:textColor="@color/blue"
+                android:textSize="13dp"
+                android:gravity="center"
+                android:textAllCaps="false" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="47dp"
+                android:layout_weight="1"
+                android:id="@+id/apply_btn_MyApplicationsFilter"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/button_bg"
+                android:drawableRight="@drawable/arrow_long_right"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Apply"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:paddingRight="10dp"
+                android:paddingLeft="25dp"
+                android:gravity="center"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
