@@ -193,6 +193,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="18dp"
+                        android:id="@+id/brand_categories_viewAll"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:lineHeight="18dp"

@@ -12,6 +12,12 @@
         android:theme="@style/Theme.Influencers_App"
         tools:targetApi="31">
         <activity
+            android:name=".activities.edit_profile"
+            android:exported="false" />
+        <activity
+            android:name=".activities.categories_viewAll"
+            android:exported="false" />
+        <activity
             android:name=".activities.complete_campaign"
             android:exported="false" />
         <activity

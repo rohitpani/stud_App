@@ -32,6 +32,10 @@ class welcome : AppCompatActivity() {
         dataList.add(5,category_welcome(R.drawable.photography,"Photography"))
         dataList.add(6,category_welcome(R.drawable.books,"Books"))
         dataList.add(7,category_welcome(R.drawable.food,"Food"))
+        dataList.add(8,category_welcome(R.drawable.fitness,"Fitness"))
+        dataList.add(9,category_welcome(R.drawable.cinema,"Entertainment"))
+        dataList.add(10,category_welcome(R.drawable.education,"Education"))
+        dataList.add(11,category_welcome(R.drawable.gaming,"Gaming"))
 
         val adapter = category_adapter(dataList,count_tv)
         recv.layoutManager = GridLayoutManager(this,3)

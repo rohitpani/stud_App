@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.categories_viewAll">
+
+    <ImageView
+        android:id="@+id/categories_viewAll_back_btn"
+        android:layout_width="6dp"
+        android:layout_height="12dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/backward_arrow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/categories_viewAll_lout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="@id/categories_viewAll_back_btn"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/about_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:lineHeight="24dp"
+            android:text="Categories"
+            android:textColor="#1E1E1E"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:layout_width="133.74dp"
+            android:layout_height="2.55dp"
+            android:layout_marginLeft="14.78dp"
+            android:layout_marginTop="3.04dp"
+            android:src="@drawable/dashed_line"
+            app:tint="#B6A6FF" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/categories_viewAll_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#F5F5F5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categories_viewAll_lout1" />
+
+    <EditText
+        android:id="@+id/search_categories_viewAll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="13dp"
+        android:background="@drawable/active_campg_bg"
+        android:drawableLeft="@drawable/search"
+        android:drawablePadding="16dp"
+        android:hint="Search"
+        android:paddingLeft="18dp"
+        android:paddingRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categories_viewAll_line1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categories_viewAll_recv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_categories_viewAll" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

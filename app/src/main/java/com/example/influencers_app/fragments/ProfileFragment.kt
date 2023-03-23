@@ -1,11 +1,13 @@
 package com.example.influencers_app.fragments
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import com.example.influencers_app.R
 import com.example.influencers_app.activities.*
@@ -19,10 +21,12 @@ class ProfileFragment : Fragment() {
     lateinit var share_app_btn:LinearLayout
     lateinit var settings_btn:LinearLayout
     lateinit var logout_btn:LinearLayout
+    lateinit var profile_edit:ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
@@ -32,6 +36,7 @@ class ProfileFragment : Fragment() {
         share_app_btn = view.findViewById(R.id.share_app_button)
         settings_btn = view.findViewById(R.id.settings_button)
         logout_btn = view.findViewById(R.id.logout_button)
+        profile_edit = view.findViewById(R.id.profile_edit)
 
 
         logout_btn.setOnClickListener {
@@ -56,6 +61,11 @@ class ProfileFragment : Fragment() {
 
         settings_btn.setOnClickListener {
             val intent: Intent = Intent(activity, settings::class.java)
+            startActivity(intent)
+        }
+
+        profile_edit.setOnClickListener {
+            val intent: Intent = Intent(activity, edit_profile::class.java)
             startActivity(intent)
         }
 

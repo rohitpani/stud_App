@@ -13,6 +13,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/utube_inputs_line1"
+            android:background="#F5F5F5"
+            android:layout_marginTop="15dp"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="15dp">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
@@ -33,13 +40,13 @@
                     android:textColor="@color/light_black"
                     android:textSize="14dp" />
 
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginLeft="3dp"-->
-<!--                    android:lineHeight="21dp"-->
-<!--                    android:text="*"-->
-<!--                    android:textColor="@color/red" />-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:lineHeight="21dp"
+                    android:text="*"
+                    android:textColor="@color/red" />
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatEditText

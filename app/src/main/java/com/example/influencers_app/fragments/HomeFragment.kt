@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.influencers_app.R
 import com.example.influencers_app.activities.BrandListing
+import com.example.influencers_app.activities.categories_viewAll
 import com.example.influencers_app.activities.forgot_passwd
 import com.example.influencers_app.adapters.*
 import com.example.influencers_app.models.brands_list_home
@@ -26,6 +27,7 @@ class HomeFragment : Fragment() {
     lateinit var cat_recv_home:RecyclerView
     lateinit var curated_recv_home:RecyclerView
     lateinit var top_brands_viewAll:TextView
+    lateinit var categories_viewAll_tv:TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -39,6 +41,7 @@ class HomeFragment : Fragment() {
         cat_recv_home = rootView.findViewById(R.id.cat_recv_home)
         curated_recv_home = rootView.findViewById(R.id.curated_recv_home)
         top_brands_viewAll = rootView.findViewById(R.id.top_brands_viewAll)
+        categories_viewAll_tv = rootView.findViewById(R.id.brand_categories_viewAll)
 
         val campaignlist:MutableList<campaign_list_home> = mutableListOf()
         campaignlist.add(0, campaign_list_home(R.drawable.air_bnb_bg,R.drawable.air_bnb))
@@ -78,11 +81,20 @@ class HomeFragment : Fragment() {
         catgList.add(5,category_welcome(R.drawable.photography,"Photography"))
         catgList.add(6,category_welcome(R.drawable.books,"Books"))
         catgList.add(7,category_welcome(R.drawable.food,"Food"))
+        catgList.add(8,category_welcome(R.drawable.fitness,"Fitness"))
+        catgList.add(9,category_welcome(R.drawable.cinema,"Entertainment"))
+        catgList.add(10,category_welcome(R.drawable.education,"Education"))
+        catgList.add(11,category_welcome(R.drawable.gaming,"Gaming"))
 
         val catgadapter = category_home_adapter(catgList)
         val cat_lout = LinearLayoutManager(this.context,LinearLayoutManager.HORIZONTAL,false)
         cat_recv_home.layoutManager = cat_lout
         cat_recv_home.adapter = catgadapter
+
+        categories_viewAll_tv.setOnClickListener {
+            val intent: Intent = Intent(activity, categories_viewAll::class.java)
+            startActivity(intent)
+        }
 
         var curatedList: MutableList<curated_data_home> = mutableListOf()
         curatedList.add(0, curated_data_home(R.drawable.summer_sales,R.drawable.the_ordinary,"Lifestyle, Skincare"))
