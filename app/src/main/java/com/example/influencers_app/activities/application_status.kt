@@ -31,6 +31,7 @@ class application_status : AppCompatActivity() {
     lateinit var in_prgress_status:ImageView
     lateinit var mark_as_complete_btn:Button
     lateinit var completed_lout:LinearLayout
+    lateinit var back_btn:ImageView
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,6 +55,7 @@ class application_status : AppCompatActivity() {
         pending_status = findViewById(R.id.pending_status)
         in_prgress_status = findViewById(R.id.in_progress_status)
         mark_as_complete_btn = findViewById(R.id.mark_as_cmplt_btn)
+        back_btn = findViewById(R.id.applicatin_status_back_btn)
         completed_lout = findViewById(R.id.application_status_completed_details_lnout)
 
         val bname = intent.getStringExtra("brand_name")
@@ -166,6 +168,10 @@ class application_status : AppCompatActivity() {
             val intent: Intent = Intent(this, complete_campaign::class.java)
             startActivity(intent)
 
+        }
+
+        back_btn.setOnClickListener {
+            finish()
         }
     }
 }

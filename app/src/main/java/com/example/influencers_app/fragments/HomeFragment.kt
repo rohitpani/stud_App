@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.influencers_app.R
 import com.example.influencers_app.activities.BrandListing
+import com.example.influencers_app.activities.all_campaign_list
 import com.example.influencers_app.activities.categories_viewAll
 import com.example.influencers_app.activities.forgot_passwd
 import com.example.influencers_app.adapters.*
@@ -28,6 +29,8 @@ class HomeFragment : Fragment() {
     lateinit var curated_recv_home:RecyclerView
     lateinit var top_brands_viewAll:TextView
     lateinit var categories_viewAll_tv:TextView
+    lateinit var featured_campaign_viewAll_tv:TextView
+    lateinit var curated_for_you_view_All:TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -42,6 +45,8 @@ class HomeFragment : Fragment() {
         curated_recv_home = rootView.findViewById(R.id.curated_recv_home)
         top_brands_viewAll = rootView.findViewById(R.id.top_brands_viewAll)
         categories_viewAll_tv = rootView.findViewById(R.id.brand_categories_viewAll)
+        featured_campaign_viewAll_tv = rootView.findViewById(R.id.featured_campg_viewAll)
+        curated_for_you_view_All = rootView.findViewById(R.id.curated_for_you_viewAll)
 
         val campaignlist:MutableList<campaign_list_home> = mutableListOf()
         campaignlist.add(0, campaign_list_home(R.drawable.air_bnb_bg,R.drawable.air_bnb))
@@ -53,14 +58,18 @@ class HomeFragment : Fragment() {
         val campaign_lout = LinearLayoutManager(this.context,LinearLayoutManager.HORIZONTAL,false)
         camp_recv_home.layoutManager = campaign_lout
         camp_recv_home.adapter = campaign_adapter
+        featured_campaign_viewAll_tv.setOnClickListener {
+            val intent: Intent = Intent(activity, all_campaign_list::class.java)
+            startActivity(intent)
+        }
 
 
         val brandslist:MutableList<brands_list_home> = mutableListOf()
-        brandslist.add(0, brands_list_home(R.drawable.wendys,3))
-        brandslist.add(1,brands_list_home(R.drawable.air_bnb,3))
-        brandslist.add(2,brands_list_home(R.drawable.handm,3))
-        brandslist.add(3,brands_list_home(R.drawable.nike,3))
-        brandslist.add(4,brands_list_home(R.drawable.the_ordinary,3))
+        brandslist.add(0, brands_list_home(R.drawable.wendys,"Wendy's",3,"Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum facilisis enim elementum et. Placerat diam nec vitae aliquet aliquet tellus adipiscing lobortis dignissim. Ut lorem faucibus enim laoreet felis. Cursus etiam malesuada tristique duis vitae amet justo morbi. Sed nunc ac at hendrerit. Vulputate sit ut gravida cras sed. Faucibus facilisis ut nibh gravida. Id urna in placerat accumsan massa imperdiet nec lacus. Neque cras morbi tempus est condimentum enim fringilla. Lorem sit nulla at turpis congue tortor."))
+        brandslist.add(1,brands_list_home(R.drawable.air_bnb,"AirBnb",3,"Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum facilisis enim elementum et. Placerat diam nec vitae aliquet aliquet tellus adipiscing lobortis dignissim. Ut lorem faucibus enim laoreet felis. Cursus etiam malesuada tristique duis vitae amet justo morbi. Sed nunc ac at hendrerit. Vulputate sit ut gravida cras sed. Faucibus facilisis ut nibh gravida. Id urna in placerat accumsan massa imperdiet nec lacus. Neque cras morbi tempus est condimentum enim fringilla. Lorem sit nulla at turpis congue tortor."))
+        brandslist.add(2,brands_list_home(R.drawable.handm,"H&M",3,"Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum facilisis enim elementum et. Placerat diam nec vitae aliquet aliquet tellus adipiscing lobortis dignissim. Ut lorem faucibus enim laoreet felis. Cursus etiam malesuada tristique duis vitae amet justo morbi. Sed nunc ac at hendrerit. Vulputate sit ut gravida cras sed. Faucibus facilisis ut nibh gravida. Id urna in placerat accumsan massa imperdiet nec lacus. Neque cras morbi tempus est condimentum enim fringilla. Lorem sit nulla at turpis congue tortor."))
+        brandslist.add(3,brands_list_home(R.drawable.nike,"Nike",3,"Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum facilisis enim elementum et. Placerat diam nec vitae aliquet aliquet tellus adipiscing lobortis dignissim. Ut lorem faucibus enim laoreet felis. Cursus etiam malesuada tristique duis vitae amet justo morbi. Sed nunc ac at hendrerit. Vulputate sit ut gravida cras sed. Faucibus facilisis ut nibh gravida. Id urna in placerat accumsan massa imperdiet nec lacus. Neque cras morbi tempus est condimentum enim fringilla. Lorem sit nulla at turpis congue tortor."))
+        brandslist.add(4,brands_list_home(R.drawable.the_ordinary,"The Ordinary",3,"Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum facilisis enim elementum et. Placerat diam nec vitae aliquet aliquet tellus adipiscing lobortis dignissim. Ut lorem faucibus enim laoreet felis. Cursus etiam malesuada tristique duis vitae amet justo morbi. Sed nunc ac at hendrerit. Vulputate sit ut gravida cras sed. Faucibus facilisis ut nibh gravida. Id urna in placerat accumsan massa imperdiet nec lacus. Neque cras morbi tempus est condimentum enim fringilla. Lorem sit nulla at turpis congue tortor."))
 
         val brands_adapter = brands_home_adapter(brandslist)
         val brands_lout = LinearLayoutManager(this.context,LinearLayoutManager.HORIZONTAL,false)
@@ -106,6 +115,11 @@ class HomeFragment : Fragment() {
         val curated_lout = LinearLayoutManager(this.context,LinearLayoutManager.VERTICAL,false)
         curated_recv_home.layoutManager = curated_lout
         curated_recv_home.adapter = curatedadapter
+
+        curated_for_you_view_All.setOnClickListener {
+            val intent: Intent = Intent(activity, all_campaign_list::class.java)
+            startActivity(intent)
+        }
 
         return rootView
     }

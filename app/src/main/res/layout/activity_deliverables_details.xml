@@ -16,15 +16,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="6dp"
-                android:layout_height="12dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="13dp"
-                android:layout_marginTop="28dp"
                 android:id="@+id/deliverable_details_back_btn"
+                android:layout_width="9.5dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="26dp"
+                android:scaleType="fitXY"
                 android:src="@drawable/backward_arrow"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -197,8 +198,9 @@
                 android:background="@drawable/script_bg">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/script1">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -215,8 +217,9 @@
 
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/script2">
 
                     <ImageView
                         android:layout_width="wrap_content"

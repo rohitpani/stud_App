@@ -49,7 +49,7 @@
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 app:cardCornerRadius="65dp"
-                android:elevation="5dp"
+                android:elevation="1.5dp"
                 android:layout_marginTop="190dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

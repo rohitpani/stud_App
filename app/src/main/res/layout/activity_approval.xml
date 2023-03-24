@@ -18,46 +18,50 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/approval_img"
             android:layout_gravity="center"
-            android:layout_marginTop="100dp"/>
-        
+            android:layout_marginTop="100dp"
+            android:src="@drawable/approval_img" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="28.5dp"
-            android:fontFamily="@font/poppins_bold"
-            android:textColor="#552FFF"
-            android:text="Submitted for Approval"
-            android:textSize="22dp"
             android:layout_gravity="center"
-            android:layout_marginTop="18dp"/>
-        
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Submitted for Approval"
+            android:textColor="#552FFF"
+            android:textSize="22dp" />
+
         <TextView
             android:layout_width="303dp"
             android:layout_height="106.5dp"
-            android:text="Hello, your account has been submitted to the Admin for approval. Kindly check back in after sometime."
-            android:textSize="14dp"
-            android:textColor="#1E1E1E"
-            android:textAlignment="center"
             android:layout_gravity="center"
-            android:lineHeight="21dp"
             android:layout_marginTop="17dp"
             android:fontFamily="@font/poppins_medium"
-            android:textFontWeight="500"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="47dp"
-            android:id="@+id/login_btn_approval"
-            android:background="@drawable/button_bg"
-            android:drawableRight="@drawable/arrow_long_right"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Login"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:textAllCaps="false" />
+            android:lineHeight="21dp"
+            android:text="Hello, your account has been submitted to the Admin for approval. Kindly check back in after sometime."
+            android:textAlignment="center"
+            android:textColor="#1E1E1E"
+            android:textFontWeight="500"
+            android:textSize="14dp" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/login_btn_approval"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="@drawable/button_bg"
+        android:drawableRight="@drawable/arrow_long_right"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

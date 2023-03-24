@@ -19,6 +19,7 @@ class Brand_Details : AppCompatActivity() {
     lateinit var brand_active_campg:TextView
     lateinit var brand_overview:TextView
     lateinit var featured_campaign_by_brand:TextView
+    lateinit var back_btn:ImageView
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,10 +29,15 @@ class Brand_Details : AppCompatActivity() {
         brand_name = findViewById(R.id.brand_name_brand_details)
         brand_active_campg = findViewById(R.id.brand_active_campg_tv)
         brand_overview = findViewById(R.id.brand_overview_brand_details)
+        back_btn = findViewById(R.id.abt_brand_back_btn)
         featured_campaign_by_brand = findViewById(R.id.featured_campaign_brand_details)
 
         brand_campgs_recv.isNestedScrollingEnabled = false
 
+
+        back_btn.setOnClickListener {
+            finish()
+        }
 
         var b_logo = intent.getIntExtra("brand_logo",R.drawable.air_bnb)
         var b_name = intent.getStringExtra("brand_name")

@@ -2,6 +2,7 @@ package com.example.influencers_app.activities
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
@@ -15,6 +16,7 @@ import android.widget.LinearLayout
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 import androidx.viewpager.widget.ViewPager
 import com.example.influencers_app.R
 import com.example.influencers_app.utils.pageAdapter
@@ -33,6 +35,7 @@ class campaign_details : AppCompatActivity() {
     lateinit var back_btn:LinearLayout
     lateinit var participation_btn: Button
     lateinit var successDialog: AlertDialog
+    lateinit var share_btn: LinearLayout
 
     @RequiresApi(Build.VERSION_CODES.M)
     @SuppressLint("MissingInflatedId")
@@ -47,12 +50,20 @@ class campaign_details : AppCompatActivity() {
 //        dos_dont_tab = findViewById(R.id.dos_donts_tab)
 //        references_tab = findViewById(R.id.references_tab)
         viewpager = findViewById(R.id.viewpager1)
-        back_btn = findViewById(R.id.back_btn)
+        back_btn = findViewById(R.id.back_btn_campg_details)
+        share_btn = findViewById(R.id.share_btn_campg_details)
 
         back_btn.setOnClickListener {
-//            val intent:Intent = Intent(this,Brand_Details::class.java)
-//            startActivity((intent))
-//
+            finish()
+        }
+
+        share_btn.setOnClickListener{
+            val sharingIntent: Intent = Intent(Intent.ACTION_SEND)
+            sharingIntent.setType("text/plain")
+            val shareBody = "Here are campaign Details"
+            sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject Here")
+            sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody)
+            startActivity(Intent.createChooser(sharingIntent, "Share via"))
         }
 
         var pageadapter = pageAdapter(supportFragmentManager,tablout.tabCount)
@@ -89,9 +100,25 @@ class campaign_details : AppCompatActivity() {
             successDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
             val cancel_btn = view.findViewById<ImageView>(R.id.cancel_btn_applied_successfully_dialog)
+            val my_app_btn = view.findViewById<Button>(R.id.my_applications_application_successfull_dialog)
+            val keep_applying = view.findViewById<AppCompatButton>(R.id.keep_applying_application_successfull_dialog)
+
             cancel_btn.setOnClickListener{
                 successDialog.dismiss()
             }
+
+            my_app_btn.setOnClickListener {
+                val intent:Intent = Intent(this,my_applications::class.java)
+                startActivity(intent)
+                successDialog.dismiss()
+            }
+
+            keep_applying.setOnClickListener {
+                val intent:Intent = Intent(this,all_campaign_list::class.java)
+                startActivity(intent)
+                successDialog.dismiss()
+            }
+
             successDialog.show()
         }
 

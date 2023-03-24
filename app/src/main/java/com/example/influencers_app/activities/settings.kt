@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.LinearLayout
 import com.example.influencers_app.R
 import com.example.influencers_app.utils.LogoutDialog
@@ -14,6 +15,7 @@ class settings : AppCompatActivity() {
     lateinit var terms_and_condition_btn: LinearLayout
     lateinit var privacy_policy_btn: LinearLayout
     lateinit var about_us: LinearLayout
+    lateinit var back_btn: ImageView
     lateinit var delete_account: LinearLayout
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +26,7 @@ class settings : AppCompatActivity() {
         privacy_policy_btn = findViewById(R.id.privacy_policy_button_settings)
         about_us = findViewById(R.id.about_us_button_settings)
         delete_account = findViewById(R.id.delete_account_button_settings)
+        back_btn = findViewById(R.id.settings_back_btn)
 
         delete_account.setOnClickListener {
             val delete_sheet: deleteAccountDialog = deleteAccountDialog()
@@ -46,6 +49,10 @@ class settings : AppCompatActivity() {
             val intent: Intent = Intent(this, FAQ_Activity::class.java)
             startActivity(intent)
         }
+        back_btn.setOnClickListener {
+            finish()
+        }
+
 
     }
 

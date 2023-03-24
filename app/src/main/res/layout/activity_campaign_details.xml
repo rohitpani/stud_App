@@ -22,7 +22,7 @@
         android:layout_height="24dp"
         android:layout_marginLeft="22dp"
         android:layout_marginTop="19dp"
-        android:id="@+id/back_btn"
+        android:id="@+id/back_btn_campg_details"
         android:background="@drawable/background_circle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -41,6 +41,7 @@
         android:layout_height="28dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="16dp"
+        android:id="@+id/share_btn_campg_details"
         android:background="@drawable/background_circle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">

@@ -3,6 +3,7 @@ package com.example.influencers_app.activities
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,11 +13,17 @@ import com.example.influencers_app.models.category_welcome
 
 class categories_viewAll : AppCompatActivity() {
     lateinit var view_all_category_recv:RecyclerView
+    lateinit var back_btn:ImageView
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_categories_view_all)
         view_all_category_recv = findViewById(R.id.categories_viewAll_recv)
+        back_btn = findViewById(R.id.categories_viewAll_back_btn)
+
+        back_btn.setOnClickListener {
+            finish()
+        }
 
         var catgList: MutableList<category_welcome> = mutableListOf()
         catgList.add(0, category_welcome(R.drawable.luggage,"Travel"))

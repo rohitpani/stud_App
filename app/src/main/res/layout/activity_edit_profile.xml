@@ -19,11 +19,12 @@
 
             <ImageView
                 android:id="@+id/edit_profile_back_btn"
-                android:layout_width="6dp"
-                android:layout_height="12dp"
+                android:layout_width="9.5dp"
+                android:layout_height="15dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="13dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="26dp"
+                android:scaleType="fitXY"
                 android:src="@drawable/backward_arrow"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -127,7 +128,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/poppins_semibold"
@@ -163,7 +164,7 @@
                         android:textColor="@color/Nero"
                         android:textSize="14dp" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/views_bg"
@@ -428,7 +429,7 @@
                         android:textColor="@color/Nero"
                         android:textSize="14dp" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/views_bg"

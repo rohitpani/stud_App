@@ -60,6 +60,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="18dp"
+                        android:id="@+id/featured_campg_viewAll"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:lineHeight="18dp"
@@ -270,6 +271,7 @@
                         android:layout_alignParentBottom="true"
                         android:lineHeight="18dp"
                         android:text="@string/View_all"
+                        android:id="@+id/curated_for_you_viewAll"
                         android:textColor="#552FFF"
                         android:textSize="12dp"
                         android:layout_marginRight="12.34dp"/>

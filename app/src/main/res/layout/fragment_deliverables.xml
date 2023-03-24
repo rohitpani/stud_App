@@ -367,6 +367,7 @@
                     android:layout_marginBottom="80dp"
                     android:background="@drawable/faq_bg"
                     android:orientation="horizontal"
+                    android:id="@+id/faq_btn_deliverables"
                     android:paddingLeft="8dp"
                     android:paddingTop="4.5dp"
                     android:paddingRight="8dp"

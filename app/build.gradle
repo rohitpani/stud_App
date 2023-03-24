@@ -39,7 +39,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     //For down pull refresh
-    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    //implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     //For gifImageview
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
     //For flexBox

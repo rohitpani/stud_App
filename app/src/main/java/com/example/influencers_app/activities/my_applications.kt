@@ -1,5 +1,6 @@
 package com.example.influencers_app.activities
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -15,11 +16,14 @@ import com.example.influencers_app.utils.myApplicationsFilterDialog
 class my_applications : AppCompatActivity() {
     lateinit var my_applications_recv:RecyclerView
     lateinit var filter_btn:ImageView
+    lateinit var back_btn:ImageView
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_applications)
         my_applications_recv = findViewById(R.id.my_applications_recv)
         filter_btn = findViewById(R.id.filter_btn_my_applications)
+        back_btn = findViewById(R.id.my_allications_back_btn)
 
         val my_applications_list = mutableListOf<my_applications_data>()
         my_applications_list.add(0, my_applications_data(R.drawable.the_ordinary,"The Ordinary","20 January, 2019","Completed"))
@@ -40,6 +44,10 @@ class my_applications : AppCompatActivity() {
         filter_btn.setOnClickListener {
             val btmsheet: myApplicationsFilterDialog = myApplicationsFilterDialog()
             this?.let { it1 -> btmsheet.show(it1.supportFragmentManager,"FilterSheet") }
+        }
+
+        back_btn.setOnClickListener {
+            finish()
         }
 
     }

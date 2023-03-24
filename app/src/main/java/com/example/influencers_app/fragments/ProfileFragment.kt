@@ -59,6 +59,15 @@ class ProfileFragment : Fragment() {
             startActivity(intent)
         }
 
+        share_app_btn.setOnClickListener {
+            val sharingIntent: Intent = Intent(Intent.ACTION_SEND)
+            sharingIntent.setType("text/plain")
+            val shareBody = "http://studApp.apk"
+            sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject Here")
+            sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody)
+            startActivity(Intent.createChooser(sharingIntent, "Share via"))
+        }
+
         settings_btn.setOnClickListener {
             val intent: Intent = Intent(activity, settings::class.java)
             startActivity(intent)

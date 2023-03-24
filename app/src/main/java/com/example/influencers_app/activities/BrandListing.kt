@@ -1,7 +1,9 @@
 package com.example.influencers_app.activities
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.influencers_app.R
@@ -10,10 +12,13 @@ import com.example.influencers_app.models.brands_listing_data
 
 class BrandListing : AppCompatActivity() {
     lateinit var top_brands_recv: RecyclerView
+    lateinit var back_btn:ImageView
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_brand_listing)
         top_brands_recv = findViewById(R.id.brands_list_recv)
+        back_btn = findViewById(R.id.top_brands_back_btn)
 
         val top_brands_list = mutableListOf<brands_listing_data>()
         top_brands_list.add(0, brands_listing_data(R.drawable.air_bnb,"Airbnb",3,"Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum facilisis enim elementum et. Placerat diam nec vitae aliquet aliquet tellus adipiscing lobortis dignissim. Ut lorem faucibus enim laoreet felis. Cursus etiam malesuada tristique duis vitae amet justo morbi. Sed nunc ac at hendrerit. Vulputate sit ut gravida cras sed. Faucibus facilisis ut nibh gravida. Id urna in placerat accumsan massa imperdiet nec lacus. Neque cras morbi tempus est condimentum enim fringilla. Lorem sit nulla at turpis congue tortor."))
@@ -30,5 +35,10 @@ class BrandListing : AppCompatActivity() {
         val top_brands_lout = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         top_brands_recv.layoutManager = top_brands_lout
         top_brands_recv.adapter = top_brands_adapter
+
+        back_btn.setOnClickListener {
+            finish()
+        }
+
     }
 }
