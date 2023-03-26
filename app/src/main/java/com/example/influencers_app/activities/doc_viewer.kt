@@ -2,6 +2,7 @@ package com.example.influencers_app.activities
 
 import android.annotation.SuppressLint
 import android.graphics.Bitmap
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebSettings
@@ -21,6 +22,7 @@ class doc_viewer : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_doc_viewer)
         webv = findViewById(R.id.web_view)
+        webv.setBackgroundColor(Color.TRANSPARENT);
         webv.settings.javaScriptEnabled = true
         webv.settings.cacheMode = WebSettings.LOAD_NO_CACHE
         pbar = findViewById(R.id.simpleProgressBar)
