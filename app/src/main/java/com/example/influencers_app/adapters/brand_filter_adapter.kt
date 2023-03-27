@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.influencers_app.R
 import com.example.influencers_app.models.brand_filter_data
 
-class brand_filter_adapter(val brand_List : MutableList<brand_filter_data>):RecyclerView.Adapter<brand_filter_adapter.viewHolder>() {
+class brand_filter_adapter(val brand_List : MutableList<String>):RecyclerView.Adapter<brand_filter_adapter.viewHolder>() {
     class viewHolder(val itmview: View): ViewHolder(itmview){
         var bname: TextView = itmview.findViewById(R.id.brand_name_filter_card)
         var brand_chk_box:CheckBox = itmview.findViewById(R.id.chkbox_brand_selection)
@@ -26,8 +26,8 @@ class brand_filter_adapter(val brand_List : MutableList<brand_filter_data>):Recy
     }
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
-        val brand_data = brand_List.get(position)
-        holder.bname.text = brand_data.brand_name
+        val brand_name = brand_List.get(position)
+        holder.bname.text = brand_name
         holder.brand_chk_box.isChecked = false
     }
 }

@@ -2,6 +2,7 @@ package com.example.influencers_app.utils
 
 import android.annotation.SuppressLint
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,9 +10,12 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.influencers_app.R
+import com.example.influencers_app.activities.brands_filter
+import com.example.influencers_app.activities.get_started
 import com.example.influencers_app.adapters.brands_list_adapter
 import com.example.influencers_app.adapters.filter_brands_adapter
 import com.example.influencers_app.adapters.filter_lout_adapter
@@ -31,6 +35,7 @@ class BottomSheetDialogCampgFilter: BottomSheetDialogFragment() {
     lateinit var cancel:ImageView
     lateinit var insta_lnout:LinearLayout
     lateinit var youtube_lnout:LinearLayout
+    lateinit var brands_filter_viewAll:TextView
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v:View = inflater.inflate(R.layout.filter_lout,container,false)
@@ -42,8 +47,15 @@ class BottomSheetDialogCampgFilter: BottomSheetDialogFragment() {
         language_recv = v.findViewById(R.id.language_filter_recv)
         insta_lnout = v.findViewById(R.id.insta_lnout_filter)
         youtube_lnout = v.findViewById(R.id.youtube_lnout_filter)
+        brands_filter_viewAll = v.findViewById(R.id.brands_filter_view_All)
 
         cancel.setOnClickListener {
+            dismiss()
+        }
+
+        brands_filter_viewAll.setOnClickListener {
+            val intent: Intent = Intent(activity, brands_filter::class.java)
+            startActivity(intent)
             dismiss()
         }
 

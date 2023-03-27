@@ -258,6 +258,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="18dp"
+                            android:id="@+id/brands_filter_view_All"
                             android:layout_alignParentEnd="true"
                             android:lineHeight="18dp"
                             android:text="@string/View_all"
