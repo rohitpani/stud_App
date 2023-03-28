@@ -2,6 +2,7 @@ package com.example.influencers_app.activities
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -43,6 +44,8 @@ class brands_filter : AppCompatActivity() , View.OnClickListener {
     lateinit var brands_name_list_filter:MutableList<String>
     lateinit var letters_lnout:LinearLayout
     lateinit var brands_filter_back_btn:ImageView
+    lateinit var clearAll_btn:TextView
+    var is_any_letter_clicked:Boolean = false
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,6 +78,7 @@ class brands_filter : AppCompatActivity() , View.OnClickListener {
         X_tv = findViewById(R.id.letter_X)
         Y_tv = findViewById(R.id.letter_Y)
         Z_tv = findViewById(R.id.letter_Z)
+        clearAll_btn = findViewById(R.id.clearAll_btn_brands_filter)
 
 
         A_tv.setOnClickListener(this)
@@ -229,7 +233,7 @@ class brands_filter : AppCompatActivity() , View.OnClickListener {
 
 
 
-        val brands_filter_adapter = brand_filter_adapter(brands_name_list_filter)
+        val brands_filter_adapter = brand_filter_adapter(brands_name_list_filter,letters_lnout)
         brands_recv_filter.layoutManager = GridLayoutManager(this,2)
         brands_recv_filter.adapter = brands_filter_adapter
 
@@ -237,13 +241,35 @@ class brands_filter : AppCompatActivity() , View.OnClickListener {
             finish()
         }
 
+        brands_recv_filter.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                if(is_any_letter_clicked){
+                    for (i in 0 until letters_lnout.getChildCount()) {
+                        val v: View = letters_lnout.getChildAt(i)
+                            if (v is TextView) {
+                                v.setTextColor(resources.getColor(R.color.Nero))
+                                v.setTextSize(TypedValue.COMPLEX_UNIT_SP,10f)
+                            }
+                    }
+                    is_any_letter_clicked = true
+                }
+            }
+        })
+
+        clearAll_btn.setOnClickListener {
+            brands_filter_adapter.positionlist.clear()
+            brands_filter_adapter.selectedlist.clear()
+            brands_filter_adapter.notifyDataSetChanged()
+        }
     }
     @SuppressLint("ResourceType")
     override fun onClick(tv: View?) {
+        is_any_letter_clicked =true
         var tvid = tv?.id
         val id = resources.getIdentifier(java.lang.String.valueOf(tvid!!), "id", "com.example.influencers_app")
         var sel_tv:TextView = findViewById<TextView>(id) as TextView
-        Toast.makeText(this,sel_tv.text.toString(),Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this,sel_tv.text.toString(),Toast.LENGTH_SHORT).show()
         var pos = findID(sel_tv.text.toString())
         (brands_recv_filter.getLayoutManager() as LinearLayoutManager).scrollToPositionWithOffset(pos, 0)
 
@@ -254,15 +280,13 @@ class brands_filter : AppCompatActivity() , View.OnClickListener {
                 var val_id = v.id
                 var view:TextView = findViewById<TextView>(val_id) as TextView
                 view.setTextColor(resources.getColor(R.color.Nero))
+                view.setTextSize(TypedValue.COMPLEX_UNIT_SP,10f)
             }
         }
 
         //setting the colour of selected leter to Blue
         sel_tv.setTextColor(resources.getColor(R.color.blue))
-
-    }
-
-    private fun changeTextColor(s: String) {
+        sel_tv.setTextSize(TypedValue.COMPLEX_UNIT_SP,14f)
 
     }
 

@@ -427,14 +427,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="21dp"
                         android:text="Already a Member?"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/poppins_semibold"/>
+                        android:textColor="#000033"
+                        android:fontFamily="@font/poppins"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="21dp"
                         android:text="Login"
                         android:textColor="#552FFF"
-                        android:fontFamily="@font/poppins_semibold"
+                        android:fontFamily="@font/poppins_medium"
                         android:id="@+id/login_tv_register"
                         android:layout_marginLeft="5dp"/>
 

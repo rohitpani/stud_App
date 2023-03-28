@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.approval">
+    tools:context=".activities.approval_rejected">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="100dp"
-            android:src="@drawable/approval_img" />
+            android:src="@drawable/approval_rejected" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -28,8 +28,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="18dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Submitted for Approval"
-            android:textColor="#552FFF"
+            android:text="Request Rejected"
+            android:textColor="#FE7062"
             android:textSize="22dp" />
 
         <TextView
@@ -47,14 +47,15 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/login_btn_approval"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/close_btn_approval_rejected"
         android:layout_width="match_parent"
         android:layout_height="47dp"
-        android:background="@drawable/button_bg"
+        android:background="@drawable/border_bg_blue"
         android:drawableRight="@drawable/arrow_long_right"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Login"
+        android:text="Close"
+        android:textColor="@color/blue"
         android:textAllCaps="false"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"

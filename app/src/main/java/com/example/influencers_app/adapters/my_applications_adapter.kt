@@ -62,6 +62,11 @@ class my_applications_adapter(val datalist:MutableList<my_applications_data>):Re
             holder.application_status.background = holder.application_status.context.resources.getDrawable(R.drawable.green_bg_application_status)
         }
 
+        holder.view_brief.setOnClickListener {
+            val intent:Intent = Intent(holder.view_brief.context,campaign_details::class.java)
+            holder.view_brief.context.startActivity(intent)
+        }
+
         holder.cardv.setOnClickListener {
             val intent: Intent = Intent(holder.cardv.context, application_status::class.java)
             intent.putExtra("brand_name",data.brand_name)

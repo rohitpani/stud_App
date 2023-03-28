@@ -91,6 +91,8 @@ class campaign_details : AppCompatActivity() {
 
 
         participation_btn.setOnClickListener {
+            participation_btn.background = resources.getDrawable(R.drawable.button_bg_gray)
+            participation_btn.text = "Already Applied"
             val builder = AlertDialog.Builder(this)
             val inflater:LayoutInflater = this.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             val view: View = inflater.inflate(R.layout.applied_successfully_dialog,null)

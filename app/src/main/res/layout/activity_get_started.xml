@@ -47,15 +47,15 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="21dp"
-                    android:fontFamily="@font/poppins_semibold"
+                    android:fontFamily="@font/poppins"
                     android:text="Already a Member?"
-                    android:textColor="@color/black" />
+                    android:textColor="#000033" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="21dp"
                     android:layout_marginLeft="5dp"
-                    android:fontFamily="@font/poppins_semibold"
+                    android:fontFamily="@font/poppins_medium"
                     android:text="Login"
                     android:id="@+id/login_tv_get_Started"
                     android:textColor="#552FFF" />

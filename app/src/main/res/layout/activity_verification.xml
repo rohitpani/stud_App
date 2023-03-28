@@ -157,8 +157,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="21dp"
                     android:text="Didn’t receive the code?"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semibold"/>
+                    android:textColor="#000033"
+                    android:fontFamily="@font/poppins"/>
 
                 <TextView
                     android:layout_width="wrap_content"
