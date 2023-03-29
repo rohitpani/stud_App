@@ -242,6 +242,7 @@ class brands_filter : AppCompatActivity() , View.OnClickListener {
         }
 
         brands_recv_filter.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            @SuppressLint("SuspiciousIndentation")
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
                 if(is_any_letter_clicked){
@@ -261,6 +262,13 @@ class brands_filter : AppCompatActivity() , View.OnClickListener {
             brands_filter_adapter.positionlist.clear()
             brands_filter_adapter.selectedlist.clear()
             brands_filter_adapter.notifyDataSetChanged()
+            for (i in 0 until letters_lnout.getChildCount()) {
+                val v: View = letters_lnout.getChildAt(i)
+                if (v is TextView) {
+                    v.setTextColor(resources.getColor(R.color.Nero))
+                    v.setTextSize(TypedValue.COMPLEX_UNIT_SP,10f)
+                }
+            }
         }
     }
     @SuppressLint("ResourceType")

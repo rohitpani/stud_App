@@ -186,6 +186,12 @@
                             android:layout_height="28dp"
                             android:layout_gravity="center"
                             android:src="@drawable/instagram" />
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="unchecked"
+                            android:id="@+id/insta_chekd_status"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -202,6 +208,12 @@
                             android:layout_height="21dp"
                             android:layout_gravity="center"
                             android:src="@drawable/youtube" />
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="unchecked"
+                            android:id="@+id/utube_chekd_status"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -336,27 +348,102 @@
                     android:background="#F5F5F5"
                     android:layout_marginTop="16dp" />
 
-                <TextView
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Age Range"
-                    android:textColor="#1E1E1E"
-                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="16dp"
-                    android:textSize="14dp"/>
+                    android:layout_marginTop="14dp">
 
-                <SeekBar
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Age Range"
+                        android:textColor="#1E1E1E"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="14dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:background="@drawable/age_range_bg"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/start_range"
+                            android:text="21"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="12dp"
+                            android:textColor="@color/blue"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="4dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/from_text"
+                            android:text="-"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12dp"
+                            android:textColor="@color/blue"
+                            android:layout_marginRight="4dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/end_range"
+                            android:text="50"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12dp"
+                            android:textColor="@color/blue"
+                            android:layout_marginRight="3dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.slider.RangeSlider
                     android:id="@+id/age_seek"
-                    android:min="16"
-                    android:max="55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:valueFrom="18"
+                    android:valueTo="90"
                     android:layout_marginLeft="14.5dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="12dp"
-                    android:progressDrawable="@drawable/seek_bar"
-                    android:thumb="@drawable/seek_thumb" />
+                    app:values="@array/initial_slider_values"
+                    style="@style/customMaterialRangeSlider"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="31dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/from_text"
+                        android:text="18"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="10dp"
+                        android:textColor="#37474F" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/to_text"
+                        android:text="90"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="10dp"
+                        android:textColor="#37474F" />
+                </RelativeLayout>
 
             </LinearLayout>
 

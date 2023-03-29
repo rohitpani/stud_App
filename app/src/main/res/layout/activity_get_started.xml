@@ -19,24 +19,61 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#E5E5E5"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/get_started_img" />
 
-            <Button
+<!--            <Button-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="47dp"-->
+<!--                android:layout_margin="15dp"-->
+<!--                android:background="@drawable/button_bg"-->
+<!--                android:drawableRight="@drawable/arrow_long_right"-->
+<!--                android:fontFamily="@font/poppins_semibold"-->
+<!--                android:text="Join now"-->
+<!--                android:id="@+id/join_now_btn"-->
+<!--                android:textAllCaps="false" />-->
+            <LinearLayout
+                android:id="@+id/join_now_btn"
                 android:layout_width="match_parent"
                 android:layout_height="47dp"
-                android:layout_margin="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@+id/search_btn_brand_listing"
                 android:background="@drawable/button_bg"
-                android:drawableRight="@drawable/arrow_long_right"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="Join now"
-                android:id="@+id/join_now_btn"
-                android:textAllCaps="false" />
+                android:layout_margin="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/lnout_btn_text"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Join now"
+                        android:textAllCaps="false"
+                        android:textSize="16dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_centerInParent="true"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/move_forward_arrow"
+                        android:layout_toEndOf="@+id/lnout_btn_text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

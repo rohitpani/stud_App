@@ -1,6 +1,7 @@
 package com.example.influencers_app.activities
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -20,6 +21,7 @@ class Brand_Details : AppCompatActivity() {
     lateinit var brand_overview:TextView
     lateinit var featured_campaign_by_brand:TextView
     lateinit var back_btn:ImageView
+    lateinit var viewAll_total_campg:TextView
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +33,7 @@ class Brand_Details : AppCompatActivity() {
         brand_overview = findViewById(R.id.brand_overview_brand_details)
         back_btn = findViewById(R.id.abt_brand_back_btn)
         featured_campaign_by_brand = findViewById(R.id.featured_campaign_brand_details)
+        viewAll_total_campg = findViewById(R.id.view_all_total_campg)
 
         brand_campgs_recv.isNestedScrollingEnabled = false
 
@@ -63,6 +66,11 @@ class Brand_Details : AppCompatActivity() {
         val brand_campg_adapter = brand_campg_adapter(campg_list_of_brands)
         brand_campgs_recv.layoutManager = brand_campg_lout
         brand_campgs_recv.adapter = brand_campg_adapter
+
+        viewAll_total_campg.setOnClickListener {
+            val intent: Intent = Intent(this, all_campaign_list::class.java)
+            startActivity(intent)
+        }
 
     }
 }

@@ -429,9 +429,10 @@
                         android:textColor="@color/Nero"
                         android:textSize="14dp" />
 
-                    <EditText
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:id="@+id/user_dob"
                         android:background="@drawable/views_bg"
                         android:fontFamily="@font/poppins"
                         android:lineHeight="21dp"
@@ -519,8 +520,6 @@
                         android:text="Save"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:paddingRight="10dp"
-                        android:paddingLeft="25dp"
                         android:gravity="center"
                         android:textAllCaps="false" />
                 </LinearLayout>

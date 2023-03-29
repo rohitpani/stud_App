@@ -82,7 +82,7 @@
                             android:layout_alignParentTop="true"
                             android:layout_centerVertical="true"
                             android:layout_marginEnd="11dp"
-                            android:layout_toStartOf="@+id/search_btn_brand_listing"
+                            android:layout_toStartOf="@+id/filter_btn_brand_listing"
                             android:background="@drawable/active_campg_bg"
                             android:drawableLeft="@drawable/search"
                             android:drawablePadding="16dp"
@@ -91,7 +91,7 @@
                             android:paddingRight="10dp" />
 
                         <ImageView
-                            android:id="@+id/search_btn_brand_listing"
+                            android:id="@+id/filter_btn_brand_listing"
                             android:layout_width="46dp"
                             android:layout_height="46dp"
                             android:layout_alignParentEnd="true"

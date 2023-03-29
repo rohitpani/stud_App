@@ -13,6 +13,7 @@ import android.view.Window
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -33,9 +34,10 @@ class campaign_details : AppCompatActivity() {
     lateinit var references_tab: TabItem
     lateinit var viewpager: ViewPager
     lateinit var back_btn:LinearLayout
-    lateinit var participation_btn: Button
+    lateinit var participation_btn: LinearLayout
     lateinit var successDialog: AlertDialog
     lateinit var share_btn: LinearLayout
+    lateinit var participate_now_text: TextView
 
     @RequiresApi(Build.VERSION_CODES.M)
     @SuppressLint("MissingInflatedId")
@@ -44,6 +46,7 @@ class campaign_details : AppCompatActivity() {
         setContentView(R.layout.activity_campaign_details)
         tablout = findViewById(R.id.tablout1)
         participation_btn = findViewById(R.id.participate_now_btn_details_frag)
+        participate_now_text = findViewById(R.id.lnout_btn_text)
 //        details_tab = findViewById<TabItem>(R.id.detail_tab)
 //        criteria_tab = findViewById(R.id.influencer_criteria_tab)
 //        deliverables_tab = findViewById(R.id.deliverables_tab)
@@ -92,7 +95,8 @@ class campaign_details : AppCompatActivity() {
 
         participation_btn.setOnClickListener {
             participation_btn.background = resources.getDrawable(R.drawable.button_bg_gray)
-            participation_btn.text = "Already Applied"
+            participate_now_text.text = "Already Applied"
+            participation_btn.isClickable = false
             val builder = AlertDialog.Builder(this)
             val inflater:LayoutInflater = this.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             val view: View = inflater.inflate(R.layout.applied_successfully_dialog,null)

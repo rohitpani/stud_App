@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,6 +26,7 @@ import com.example.influencers_app.models.filter_Cards_Data
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.slider.RangeSlider
 
 class BottomSheetDialogCampgFilter: BottomSheetDialogFragment() {
     lateinit var campg_type_recv:RecyclerView
@@ -36,6 +38,11 @@ class BottomSheetDialogCampgFilter: BottomSheetDialogFragment() {
     lateinit var insta_lnout:LinearLayout
     lateinit var youtube_lnout:LinearLayout
     lateinit var brands_filter_viewAll:TextView
+    lateinit var instag_chckd_status:TextView
+    lateinit var youtube_chckd_status:TextView
+    lateinit var start_range:TextView
+    lateinit var end_range:TextView
+    lateinit var age_range_slider:RangeSlider
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v:View = inflater.inflate(R.layout.filter_lout,container,false)
@@ -48,6 +55,11 @@ class BottomSheetDialogCampgFilter: BottomSheetDialogFragment() {
         insta_lnout = v.findViewById(R.id.insta_lnout_filter)
         youtube_lnout = v.findViewById(R.id.youtube_lnout_filter)
         brands_filter_viewAll = v.findViewById(R.id.brands_filter_view_All)
+        instag_chckd_status = v.findViewById(R.id.insta_chekd_status)
+        youtube_chckd_status = v.findViewById(R.id.utube_chekd_status)
+        start_range = v.findViewById(R.id.start_range)
+        end_range = v.findViewById(R.id.end_range)
+        age_range_slider = v.findViewById(R.id.age_seek)
 
         cancel.setOnClickListener {
             dismiss()
@@ -115,10 +127,52 @@ class BottomSheetDialogCampgFilter: BottomSheetDialogFragment() {
         language_recv.layoutManager = language_lout
         language_recv.adapter = language_adapter
 
-//        insta_lnout.setOnClickListener {
-//
-//        }
+        insta_lnout.setOnClickListener {
+            if(instag_chckd_status.text.toString().equals("unchecked")){
+                insta_lnout.background = resources.getDrawable(R.drawable.social_media_blue_bg)
+                instag_chckd_status.text = "checked"
+            }
+            else{
+                insta_lnout.background = resources.getDrawable(R.drawable.social_media_bg)
+                instag_chckd_status.text = "unchecked"
+            }
+        }
 
+        youtube_lnout.setOnClickListener {
+            if(youtube_chckd_status.text.toString().equals("unchecked")){
+                youtube_lnout.background = resources.getDrawable(R.drawable.social_media_blue_bg)
+                youtube_chckd_status.text = "checked"
+            }
+            else{
+                youtube_lnout.background = resources.getDrawable(R.drawable.social_media_bg)
+                youtube_chckd_status.text = "unchecked"
+            }
+        }
+
+
+        age_range_slider.addOnSliderTouchListener(object : RangeSlider.OnSliderTouchListener{
+            override fun onStartTrackingTouch(slider: RangeSlider) {
+                val values = slider.values
+
+                start_range.text = values[0].toInt().toString()
+                end_range.text = values[1].toInt().toString()
+                //Those are the satrt and end values of sldier when user start dragging
+                Log.i("SliderPreviousValue Fr", values[0].toString())
+                Log.i("SliderPreviousValue To", values[1].toString())
+            }
+
+            override fun onStopTrackingTouch(slider: RangeSlider) {
+                val values = slider.values
+                start_range.text = values[0].toInt().toString()
+                end_range.text = values[1].toInt().toString()
+
+                //Those are the new updated values of sldier when user has finshed dragging
+                Log.i("SliderNewValue From", values[0].toString())
+                Log.i("SliderNewValue To", values[1].toString())
+
+                //textView.setText("Start value: ${values[0]}, End value: ${values[1]}")
+            }
+        })
         return v
     }
 

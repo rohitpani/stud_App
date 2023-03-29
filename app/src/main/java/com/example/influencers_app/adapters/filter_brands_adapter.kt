@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.influencers_app.R
@@ -13,6 +14,7 @@ import com.example.influencers_app.models.filter_Cards_Data
 class filter_brands_adapter(val datalist:MutableList<filter_Brands_Data>) : RecyclerView.Adapter<filter_brands_adapter.viewHolder>() {
     class viewHolder(val item: View):ViewHolder(item) {
         val bimgv: ImageView = itemView.findViewById(R.id.brands_logo_filter)
+        val b_cardv: LinearLayout = itemView.findViewById(R.id.cardv_border_lnout)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
@@ -26,6 +28,14 @@ class filter_brands_adapter(val datalist:MutableList<filter_Brands_Data>) : Recy
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
        val data = datalist.get(position)
-        holder.bimgv.setImageResource(data.brand_img)
+       holder.bimgv.setImageResource(data.brand_img)
+       holder.bimgv.setOnClickListener {
+           if(holder.b_cardv.visibility == View.GONE){
+              holder.b_cardv.visibility = View.VISIBLE
+           }
+           else{
+               holder.b_cardv.visibility = View.GONE
+           }
+       }
     }
 }

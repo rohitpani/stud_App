@@ -5,11 +5,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.influencers_app.R
 
 class get_started : AppCompatActivity() {
-    lateinit var join_now:Button
+    lateinit var join_now:LinearLayout
     lateinit var login_tv_get_Started:TextView
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {

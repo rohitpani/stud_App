@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import com.example.influencers_app.R
 import com.example.influencers_app.activities.*
 import com.example.influencers_app.utils.BottomSheetDialogCampgFilter
@@ -22,6 +23,8 @@ class ProfileFragment : Fragment() {
     lateinit var settings_btn:LinearLayout
     lateinit var logout_btn:LinearLayout
     lateinit var profile_edit:ImageView
+    lateinit var total_campg:TextView
+    lateinit var active_campg:TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -37,6 +40,8 @@ class ProfileFragment : Fragment() {
         settings_btn = view.findViewById(R.id.settings_button)
         logout_btn = view.findViewById(R.id.logout_button)
         profile_edit = view.findViewById(R.id.profile_edit)
+        total_campg = view.findViewById(R.id.total_campaigns)
+        active_campg = view.findViewById(R.id.active_campaigns)
 
 
         logout_btn.setOnClickListener {
@@ -75,6 +80,16 @@ class ProfileFragment : Fragment() {
 
         profile_edit.setOnClickListener {
             val intent: Intent = Intent(activity, edit_profile::class.java)
+            startActivity(intent)
+        }
+
+        total_campg.setOnClickListener {
+            val intent: Intent = Intent(activity, all_campaign_list::class.java)
+            startActivity(intent)
+        }
+
+        active_campg.setOnClickListener {
+            val intent: Intent = Intent(activity, all_campaign_list::class.java)
             startActivity(intent)
         }
 

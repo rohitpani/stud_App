@@ -1,17 +1,19 @@
 package com.example.influencers_app.activities
 
 import android.annotation.SuppressLint
+import android.app.DatePickerDialog
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.ImageView
-import android.widget.Spinner
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.influencers_app.R
+import java.text.SimpleDateFormat
+import java.util.*
 
 class edit_profile : AppCompatActivity() {
     lateinit var influencer_catg: Spinner
     lateinit var lang_catg: Spinner
     lateinit var back_btn:ImageView
+    lateinit var user_dob: TextView
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +21,7 @@ class edit_profile : AppCompatActivity() {
         influencer_catg = findViewById(R.id.influencer_catg)
         lang_catg = findViewById(R.id.languge_catg)
         back_btn = findViewById(R.id.edit_profile_back_btn)
+        user_dob = findViewById(R.id.user_dob)
 
         val catglist:ArrayList<String> = ArrayList()
         catglist.add("Travel")
@@ -63,5 +66,25 @@ class edit_profile : AppCompatActivity() {
             finish()
         }
 
+        user_dob.setOnClickListener {
+            val c = Calendar.getInstance()
+            val year = c.get(Calendar.YEAR)
+            val month = c.get(Calendar.MONTH)
+            val day = c.get(Calendar.DAY_OF_MONTH)
+
+
+            val datePickerDialog = DatePickerDialog(
+                this,
+                { view, year, monthOfYear, dayOfMonth ->
+                    var formatter = SimpleDateFormat("dd'th' MMM yyyy")
+                    var cal = Calendar.getInstance()
+                    cal.set(year,monthOfYear,dayOfMonth)
+                    var dateString: String = formatter.format(cal.time)
+                    user_dob.setText(dateString)
+                }, year, month, day)
+            datePickerDialog.show()
+        }
+
     }
+
 }

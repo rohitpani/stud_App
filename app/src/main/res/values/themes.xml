@@ -29,4 +29,25 @@
         <item name="android:background">@drawable/filter_dialog_bg</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
+
+<!--    <style name="customMaterialRangeSlider" parent="Widget.MaterialComponents.Slider">-->
+<!--        <item name="android:thumbTint">@color/blue</item>-->
+<!--        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>-->
+<!--    </style>-->
+
+    <style name="customMaterialRangeSlider" parent="Widget.MaterialComponents.Slider">
+        <item name="thumbColor">@color/blue</item>
+        <item name="tickVisible">false</item>
+        <item name="android:stepSize">1</item>
+        <item name="trackColorInactive">#F0F0F0</item>
+        <item name="trackColorActive">@color/blue</item>
+        <item name="trackHeight">10dp</item>
+        <item name="labelStyle">@style/Tooltip</item>
+    </style>
+
+    <style name="Tooltip" parent="Widget.MaterialComponents.Tooltip">
+        <!--This is the Tooltip Background Color -->
+        <item name="backgroundTint">@color/blue</item>
+    </style>
+
 </resources>
