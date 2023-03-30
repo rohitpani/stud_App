@@ -44,6 +44,12 @@ dependencies {
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
     //For flexBox
     implementation 'com.google.android.flexbox:flexbox:3.0.0'
+    //For readmore tv implementation
+    //implementation 'com.borjabravo:readmoretextview:2.1.0'
+    //implementation 'com.borjabravo:readmoretextview:2.1.0'
+    //implementation 'kr.co.prnd:readmore-textview:1.0.0'
+    //implementation 'com.github.Muratthekus:ReadMoreText:v1.1'
+    implementation 'com.github.devsideal:ReadMoreOption:1.0.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'

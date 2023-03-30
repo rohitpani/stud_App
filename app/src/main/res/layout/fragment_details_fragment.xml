@@ -88,6 +88,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/campg_overview"
                     android:layout_marginLeft="13dp"
                     android:layout_marginRight="26dp"
                     android:layout_marginTop="11dp"
@@ -95,7 +96,25 @@
                     android:lineHeight="18dp"
                     android:fontFamily="@font/poppins_medium"
                     android:textColor="#1E1E1E"
-                    android:text="Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum facilisis enim elementum et. Placerat diam nec vitae aliquet aliquet tellus adipiscing lobortis dignissim. Ut lorem faucibus enim laoreet felis. Cursus etiam malesuada  Read more"/>
+                    android:text="Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum facilisis enim elementum et. Placerat diam nec vitae aliquet aliquet tellus adipiscing lobortis dignissim. Ut lorem faucibus enim laoreet felis. Cursus etiam malesuada tristique duis vitae amet justo morbi. Sed nunc ac at hendrerit. Vulputate sit ut gravida cras sed. Faucibus facilisis ut nibh gravida. Id urna in placerat accumsan massa imperdiet nec lacus. Neque cras morbi tempus est condimentum enim fringilla. Lorem sit nulla at turpis congue tortor.
+Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum facilisis enim elementum et. Placerat diam nec vitae aliquet aliquet tellus adipiscing lobortis dignissim. Ut lorem faucibus enim laoreet felis. Cursus etiam malesuada tristique duis vitae amet justo morbi. Sed nunc ac at hendrerit. Vulputate sit ut gravida cras sed. Faucibus facilisis ut nibh gravida. Id urna in placerat accumsan massa imperdiet nec lacus. Neque cras morbi tempus est condimentum enim fringilla. Lorem sit nulla at turpis congue tortor."/>
+
+<!--                <me.thekusch.view.ReadMoreTextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="13dp"-->
+<!--                    android:layout_marginRight="26dp"-->
+<!--                    android:layout_marginTop="11dp"-->
+<!--                    android:textSize="12dp"-->
+<!--                    android:lineHeight="18dp"-->
+<!--                    android:fontFamily="@font/poppins_medium"-->
+<!--                    android:textColor="#1E1E1E"-->
+<!--                    android:text="Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum facilisis enim elementum et. Placerat diam nec vitae aliquet aliquet tellus adipiscing lobortis dignissim. Ut lorem faucibus enim laoreet felis. Cursus etiam malesuada  Read more"-->
+<!--                    app:readMoreText="Read More"-->
+<!--                    app:readLessText="Read Less"-->
+<!--                    app:textMode="length"-->
+<!--                    app:anchorPoint="4"/>-->
+
 
                 <View
                     android:layout_width="match_parent"

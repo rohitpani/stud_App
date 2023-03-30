@@ -40,9 +40,6 @@
                 android:id="@+id/join_now_btn"
                 android:layout_width="match_parent"
                 android:layout_height="47dp"
-                android:layout_alignParentStart="true"
-                android:layout_marginEnd="15dp"
-                android:layout_toStartOf="@+id/search_btn_brand_listing"
                 android:background="@drawable/button_bg"
                 android:layout_margin="15dp">
 

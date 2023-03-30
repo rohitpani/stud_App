@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.influencers_app.R
 import com.example.influencers_app.models.faq_data
 
-class faq_adapter(val datalist:MutableList<faq_data>):RecyclerView.Adapter<faq_adapter.viewHolder>() {
+class faq_adapter(val datalist: MutableList<faq_data>,val faq_recv: RecyclerView):RecyclerView.Adapter<faq_adapter.viewHolder>() {
     class viewHolder(val itemView: View):ViewHolder(itemView) {
         val ques_tv:TextView = itemView.findViewById(R.id.faq_question)
         val ques_ans:TextView = itemView.findViewById(R.id.faq_answer)
@@ -32,7 +32,21 @@ class faq_adapter(val datalist:MutableList<faq_data>):RecyclerView.Adapter<faq_a
         holder.ques_tv.text = data.faq_ques
         holder.ques_ans.text = data.ques_ans
 
+
         holder.plus_btn.setOnClickListener{
+                val x: Int = getItemCount()
+                var i = 0
+                while (i < x) {
+                    val temp_hold: viewHolder = faq_recv.getChildViewHolder(faq_recv.getChildAt(i)) as viewHolder
+                    if(temp_hold.minus_btn.visibility == View.VISIBLE){
+                        temp_hold.minus_btn.visibility = View.GONE
+                        temp_hold.plus_btn.visibility = View.VISIBLE
+                        temp_hold.ques_ans.visibility = View.GONE
+                    }
+                    ++i
+                }
+
+
             holder.plus_btn.visibility = View.GONE
             holder.minus_btn.visibility = View.VISIBLE
             holder.ques_ans.visibility = View.VISIBLE

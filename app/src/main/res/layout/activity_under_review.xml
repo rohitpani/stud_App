@@ -6,51 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".activities.under_review">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_gravity="center"
+            android:src="@drawable/approval_img" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/approval_img"
-                android:layout_gravity="center"
-                android:layout_marginTop="100dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="28.5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Under Review"
+            android:textColor="#552FFF"
+            android:textSize="22dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="28.5dp"
-                android:fontFamily="@font/poppins_bold"
-                android:textColor="#552FFF"
-                android:text="Under Review"
-                android:textSize="22dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="18dp"/>
+        <TextView
+            android:layout_width="303dp"
+            android:layout_height="27.81dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/poppins_medium"
+            android:lineHeight="21dp"
+            android:text="Hello, your account is still under review"
+            android:textAlignment="center"
+            android:textColor="#1E1E1E"
+            android:textFontWeight="500"
+            android:textSize="14dp" />
 
-            <TextView
-                android:layout_width="303dp"
-                android:layout_height="27.81dp"
-                android:text="Hello, your account is still under review"
-                android:textSize="14dp"
-                android:textColor="#1E1E1E"
-                android:textAlignment="center"
-                android:layout_gravity="center"
-                android:lineHeight="21dp"
-                android:layout_marginTop="17dp"
-                android:fontFamily="@font/poppins_medium"
-                android:textFontWeight="500"/>
-
-        </LinearLayout>
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/refresh_btn_approval"
         android:layout_width="match_parent"
         android:layout_height="47dp"
+        android:stateListAnimator="@null"
         android:background="@drawable/border_bg_blue"
         android:drawableRight="@drawable/refresh_icon"
         android:fontFamily="@font/poppins_semibold"

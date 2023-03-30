@@ -81,7 +81,8 @@
                     android:drawablePadding="7dp"
                     android:paddingLeft="15dp"
                     android:textSize="14dp"
-                    android:hint="Enter your name"/>
+                    android:hint="Enter your name"
+                    android:inputType="textPersonName"/>
                 
             </LinearLayout>
             </LinearLayout>
@@ -174,6 +175,7 @@
                         android:drawablePadding="7dp"
                         android:paddingLeft="15dp"
                         android:textSize="14dp"
+                        android:inputType="textEmailAddress"
                         android:hint="Enter your Email"/>
 
                 </LinearLayout>
@@ -222,6 +224,7 @@
                         android:textSize="14dp"
                         android:hint="Enter Password"
                         android:paddingRight="15dp"
+                        android:inputType="textPassword"
                         android:drawableRight="@drawable/view_off" />
 
                 </LinearLayout>
@@ -381,13 +384,15 @@
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:layout_marginTop="28.61dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="18dp"
                 android:layout_marginRight="19dp">
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/chkbox"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
                     android:checked="true"
                     android:buttonTint="#585CE5"/>
                 <TextView
@@ -406,15 +411,54 @@
                 android:orientation="vertical"
                 android:layout_margin="18dp">
 
-                <Button
+<!--                <Button-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="47dp"-->
+<!--                    android:background="@drawable/button_bg"-->
+<!--                    android:drawableRight="@drawable/arrow_long_right"-->
+<!--                    android:fontFamily="@font/poppins_semibold"-->
+<!--                    android:text="Sign Up"-->
+<!--                    android:id="@+id/sign_up_btn"-->
+<!--                    android:textAllCaps="false" />-->
+
+                <LinearLayout
+                    android:id="@+id/sign_up_btn"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"
                     android:background="@drawable/button_bg"
-                    android:drawableRight="@drawable/arrow_long_right"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:text="Sign Up"
-                    android:id="@+id/sign_up_btn"
-                    android:textAllCaps="false" />
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/lnout_btn_text"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Sign Up"
+                            android:textAllCaps="false"
+                            android:textSize="16dp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:layout_centerInParent="true"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/move_forward_arrow"
+                            android:layout_toEndOf="@+id/lnout_btn_text"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"

@@ -134,17 +134,54 @@
 
             </LinearLayout>
 
-            <Button
+<!--            <Button-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="47dp"-->
+<!--                android:id="@+id/proceed_btn"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_marginBottom="20dp"-->
+<!--                android:background="@drawable/button_bg"-->
+<!--                android:drawableRight="@drawable/arrow_long_right"-->
+<!--                android:fontFamily="@font/poppins_semibold"-->
+<!--                android:text="Proceed"-->
+<!--                android:textAllCaps="false" />-->
+
+            <LinearLayout
+                android:id="@+id/proceed_btn"
                 android:layout_width="match_parent"
                 android:layout_height="47dp"
-                android:id="@+id/proceed_btn"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
                 android:background="@drawable/button_bg"
-                android:drawableRight="@drawable/arrow_long_right"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="Proceed"
-                android:textAllCaps="false" />
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/lnout_btn_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:text="Proceed"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/move_forward_arrow"
+                        android:layout_toEndOf="@+id/lnout_btn_text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
 
 
         </LinearLayout>

@@ -28,7 +28,7 @@ class FAQ_Activity : AppCompatActivity() {
         faqlist.add(6, faq_data("Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum","Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum"))
         faqlist.add(7, faq_data("Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum","Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum.Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum"))
 
-        val faq_adapter = faq_adapter(faqlist)
+        val faq_adapter = faq_adapter(faqlist,faq_recv)
         var faq_lout = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
         faq_recv.layoutManager = faq_lout
         faq_recv.adapter = faq_adapter

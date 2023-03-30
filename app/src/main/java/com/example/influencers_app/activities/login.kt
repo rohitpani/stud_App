@@ -5,12 +5,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import com.example.influencers_app.R
 
 class login : AppCompatActivity() {
-    lateinit var login_btn: Button
+    lateinit var login_btn: LinearLayout
     lateinit var login_wth_otp:AppCompatButton
     lateinit var forgot_pswd_tv:TextView
     @SuppressLint("MissingInflatedId")

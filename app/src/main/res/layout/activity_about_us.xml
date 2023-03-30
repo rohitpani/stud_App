@@ -125,7 +125,8 @@ Lorem ipsum dolor sit amet consectetur. At bibendum lorem rutrum facilisis enim 
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:orientation="horizontal"
-                    android:layout_marginTop="11.84dp">
+                    android:layout_marginTop="11.84dp"
+                    android:layout_marginBottom="12dp">
 
                     <LinearLayout
                         android:id="@+id/insta_lnout_filter"

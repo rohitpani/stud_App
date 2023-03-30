@@ -333,10 +333,16 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
+                    android:stateListAnimator="@null"
+                    android:textColor="@color/white"
                     android:id="@+id/save_details_btn_bill_details"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
                     android:background="@drawable/button_bg"
                     android:fontFamily="@font/poppins_semibold"
                     android:text="Save Details"

@@ -5,11 +5,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.LinearLayout
 import com.example.influencers_app.R
 import com.example.influencers_app.fragments.HomeFragment
 
 class login_with_OTP : AppCompatActivity() {
-    lateinit var enter_btn:Button
+    lateinit var enter_btn:LinearLayout
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

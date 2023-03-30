@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatButton
 import com.example.influencers_app.R
 
 class application_status : AppCompatActivity() {
@@ -29,7 +30,7 @@ class application_status : AppCompatActivity() {
     lateinit var completed_status:ImageView
     lateinit var pending_status:ImageView
     lateinit var in_prgress_status:ImageView
-    lateinit var mark_as_complete_btn:Button
+    lateinit var mark_as_complete_btn:AppCompatButton
     lateinit var completed_lout:LinearLayout
     lateinit var back_btn:ImageView
 

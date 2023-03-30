@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.influencers_app.R
@@ -15,7 +17,8 @@ class welcome : AppCompatActivity() {
     lateinit var recv:RecyclerView
     lateinit var skip_tv:TextView
     lateinit var count_tv:TextView
-    lateinit var proceed_btn: Button
+    lateinit var proceed_btn: LinearLayout
+    var count = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
@@ -50,6 +53,8 @@ class welcome : AppCompatActivity() {
         proceed_btn.setOnClickListener {
             val intent: Intent = Intent(this,homepage::class.java)
             startActivity(intent)
+            finishAffinity()
         }
     }
+
 }

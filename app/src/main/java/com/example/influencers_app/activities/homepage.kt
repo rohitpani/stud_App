@@ -5,10 +5,7 @@ import android.content.res.Resources.NotFoundException
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.FrameLayout
-import android.widget.ImageView
-import android.widget.RelativeLayout
-import android.widget.TextView
+import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import com.example.influencers_app.R
@@ -21,6 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class homepage : AppCompatActivity() {
     //lateinit var bnav:BottomNavigationView
     //lateinit var flout:FrameLayout
+    var count = 0
     lateinit var home_frag:Fragment
     lateinit var campg_frag:Fragment
     lateinit var earnings_frag:Fragment
@@ -160,6 +158,16 @@ class homepage : AppCompatActivity() {
             campg_tv.setTextColor(resources.getColor(R.color.black))
             earn_img.setImageDrawable(resources.getDrawable(R.drawable.earning_icon))
             earn_tv.setTextColor(resources.getColor(R.color.black))
+        }
+    }
+
+    override fun onBackPressed() {
+        count++
+        if(count == 1){
+            Toast.makeText(this,"Press back Again to Exit !!", Toast.LENGTH_SHORT).show()
+        }
+        else{
+            super.onBackPressed()
         }
     }
 }
