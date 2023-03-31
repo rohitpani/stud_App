@@ -20,6 +20,7 @@ class verification : AppCompatActivity() {
     lateinit var et4:EditText
     lateinit var timer_tv:TextView
     lateinit var countdownTimer:CountDownTimer
+    var entered_field_count = 0;
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,19 +41,24 @@ class verification : AppCompatActivity() {
 
         verify_button.setOnClickListener {
 
-            val act_name = intent.getStringExtra("callingAct")
-            if(act_name.equals("login_with_OTP")){
-                val intent:Intent = Intent(this,homepage::class.java)
-                startActivity(intent)
-                finishAffinity()
-            }
-            else if(act_name.equals("forgot_password")){
-                val intent:Intent = Intent(this,reset_password::class.java)
-                startActivity(intent)
+            if (entered_field_count == 4){
+                val act_name = intent.getStringExtra("callingAct")
+                if(act_name.equals("login_with_OTP")){
+                    val intent:Intent = Intent(this,homepage::class.java)
+                    startActivity(intent)
+                    finishAffinity()
+                }
+                else if(act_name.equals("forgot_password")){
+                    val intent:Intent = Intent(this,reset_password::class.java)
+                    startActivity(intent)
+                }
+                else{
+                    val intent:Intent = Intent(this,approval::class.java)
+                    startActivity(intent)
+                }
             }
             else{
-                val intent:Intent = Intent(this,approval::class.java)
-                startActivity(intent)
+                Toast.makeText(this,"Please enter Proper OTP",Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -66,6 +72,12 @@ class verification : AppCompatActivity() {
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 if(et1.text.toString().length == 1){
                     et2.requestFocus()
+                    entered_field_count++
+                }
+                else{
+                    if(et1.text.toString().length == 0){
+                        entered_field_count--
+                    }
                 }
             }
 
@@ -91,10 +103,12 @@ class verification : AppCompatActivity() {
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 if(et2.text.toString().length == 1){
                     et3.requestFocus()
+                    entered_field_count++
                 }
                 else{
                     if(et2.text.toString().length == 0){
                         et1.requestFocus()
+                        entered_field_count--
                     }
                 }
             }
@@ -120,10 +134,12 @@ class verification : AppCompatActivity() {
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 if(et3.text.toString().length == 1){
                     et4.requestFocus()
+                    entered_field_count++
                 }
                 else{
                     if(et3.text.toString().length == 0){
                         et2.requestFocus()
+                        entered_field_count--
                     }
                 }
             }
@@ -152,10 +168,12 @@ class verification : AppCompatActivity() {
 //                    et2.requestFocus()
 //                    et1.background = resources.getDrawable(R.drawable.otp_bg)
                     et4.clearFocus()
+                    entered_field_count++
                 }
                 else{
                     if(et4.text.toString().length == 0){
                         et3.requestFocus()
+                        entered_field_count--
                     }
                 }
             }

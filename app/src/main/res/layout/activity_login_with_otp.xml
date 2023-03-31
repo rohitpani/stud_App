@@ -73,7 +73,8 @@
 
                 <EditText
                     android:layout_width="match_parent"
-                    android:layout_height="21dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mobile_no_login_with_OTP"
                     android:background="#F9F7FF"
                     android:drawableLeft="@drawable/phone"
                     android:layout_gravity="center"
@@ -81,8 +82,29 @@
                     android:drawablePadding="7dp"
                     android:textSize="14dp"
                     android:inputType="phone"
+                    android:fontFamily="@font/poppins"
                     android:hint="Enter your Mobile Number"/>
 
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mobile_no_error_login_OTP"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/red"
+                    android:layout_gravity="center"
+                    android:drawablePadding="7dp"
+                    android:textSize="10dp"
+                    android:visibility="gone"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins"
+                    />
 
             </LinearLayout>
         </LinearLayout>

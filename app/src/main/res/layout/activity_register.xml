@@ -74,7 +74,8 @@
                 
                 <EditText
                     android:layout_width="match_parent"
-                    android:layout_height="21dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/user_fullname"
                     android:background="#F9F7FF"
                     android:drawableLeft="@drawable/username"
                     android:layout_gravity="center"
@@ -82,10 +83,32 @@
                     android:paddingLeft="15dp"
                     android:textSize="14dp"
                     android:hint="Enter your name"
+                    android:fontFamily="@font/poppins"
                     android:inputType="textPersonName"/>
                 
             </LinearLayout>
+                    <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/full_name_error"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/red"
+                        android:layout_gravity="center"
+                        android:drawablePadding="7dp"
+                        android:textSize="10dp"
+                        android:visibility="gone"
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppins"
+                        />
+
+                </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -121,7 +144,8 @@
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="21dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/user_mobile_no"
                         android:background="#F9F7FF"
                         android:drawableLeft="@drawable/phone"
                         android:layout_gravity="center"
@@ -129,10 +153,34 @@
                         android:paddingLeft="15dp"
                         android:textSize="14dp"
                         android:inputType="phone"
+                        android:fontFamily="@font/poppins"
                         android:hint="Enter your Mobile Number"/>
 
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mobile_no_error"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/red"
+                        android:layout_gravity="center"
+                        android:drawablePadding="7dp"
+                        android:textSize="10dp"
+                        android:visibility="gone"
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppins"
+                        />
+
+                </LinearLayout>
+
             </LinearLayout>
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -168,7 +216,8 @@
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="21dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/user_email"
                         android:background="#F9F7FF"
                         android:drawableLeft="@drawable/mail"
                         android:layout_gravity="center"
@@ -176,10 +225,33 @@
                         android:paddingLeft="15dp"
                         android:textSize="14dp"
                         android:inputType="textEmailAddress"
+                        android:fontFamily="@font/poppins"
                         android:hint="Enter your Email"/>
 
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/email_id_error"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/red"
+                        android:layout_gravity="center"
+                        android:drawablePadding="7dp"
+                        android:textSize="10dp"
+                        android:visibility="gone"
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppins"
+                        />
+
+                </LinearLayout>
             </LinearLayout>
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -215,7 +287,8 @@
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="21dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/user_password"
                         android:background="#F9F7FF"
                         android:drawableLeft="@drawable/locked"
                         android:layout_gravity="center"
@@ -225,10 +298,33 @@
                         android:hint="Enter Password"
                         android:paddingRight="15dp"
                         android:inputType="textPassword"
+                        android:fontFamily="@font/poppins"
                         android:drawableRight="@drawable/view_off" />
 
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/password_error"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/red"
+                        android:layout_gravity="center"
+                        android:drawablePadding="7dp"
+                        android:textSize="10dp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/poppins"
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="4dp"
+                        />
+
+                </LinearLayout>
             </LinearLayout>
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -295,7 +391,7 @@
 
                             <EditText
                                 android:layout_width="match_parent"
-                                android:layout_height="21dp"
+                                android:layout_height="wrap_content"
                                 android:gravity="top"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="10dp"
@@ -353,7 +449,7 @@
 
                             <EditText
                                 android:layout_width="match_parent"
-                                android:layout_height="21dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="10dp"
                                 android:background="#F9F7FF"
