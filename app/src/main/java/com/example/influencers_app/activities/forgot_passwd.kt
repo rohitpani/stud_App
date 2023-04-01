@@ -46,7 +46,7 @@ class forgot_passwd : AppCompatActivity() {
         } else {
             forgot_pass_mobile_error.visibility = View.GONE
             forgot_pass_mobile_error.text = ""
-            valid = true
+            //valid = true
         }
         return valid
 

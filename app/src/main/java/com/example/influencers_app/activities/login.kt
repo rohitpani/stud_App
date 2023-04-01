@@ -4,12 +4,13 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.InputType
+import android.text.TextWatcher
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.widget.AppCompatButton
+import androidx.core.content.res.ResourcesCompat
 import com.example.influencers_app.R
 
 class login : AppCompatActivity() {
@@ -20,6 +21,7 @@ class login : AppCompatActivity() {
     lateinit var password:EditText
     lateinit var mobile_no_error:TextView
     lateinit var password_error:TextView
+    lateinit var view_pswd: ImageView
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +34,7 @@ class login : AppCompatActivity() {
         password =  findViewById(R.id.login_Password)
         mobile_no_error = findViewById(R.id.mobile_no_error_login)
         password_error = findViewById(R.id.password_error_login)
+        view_pswd = findViewById(R.id.pswd_toggle_login)
 
         forgot_pswd_tv.setOnClickListener {
             val intent: Intent = Intent(this,forgot_passwd::class.java)
@@ -50,6 +53,43 @@ class login : AppCompatActivity() {
             }
         }
 
+        password.addTextChangedListener(object: TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun afterTextChanged(editable: Editable?) {
+                if (editable.toString() == "") {
+                    view_pswd.setVisibility(View.GONE)
+                } else {
+                    view_pswd.setVisibility(View.VISIBLE)
+                }
+            }
+
+        })
+
+        view_pswd.setOnClickListener(View.OnClickListener {
+            if (view_pswd.getTag().toString() == "1") {
+                password.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
+                var typeface = ResourcesCompat.getFont(this,R.font.poppins)
+                password.typeface = typeface
+                view_pswd.setImageResource(R.drawable.views_on)
+                view_pswd.setTag("2")
+                password.setSelection(password.length())
+            } else if (view_pswd.getTag().toString() == "2") {
+                password.setInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
+                var typeface = ResourcesCompat.getFont(this,R.font.poppins)
+                password.typeface = typeface
+                view_pswd.setImageResource(R.drawable.view_off)
+                view_pswd.setTag("1")
+                password.setSelection(password.length())
+            }
+        })
+
     }
 
     fun isValid():Boolean{
@@ -67,7 +107,7 @@ class login : AppCompatActivity() {
         else{
             mobile_no_error.visibility = View.GONE
             mobile_no_error.text = ""
-            valid = true
+            //valid = true
         }
 
         if(password.text.toString().trim().length.equals(0)){
@@ -93,7 +133,7 @@ class login : AppCompatActivity() {
         else{
             password_error.visibility = View.GONE
             password_error.text = ""
-            valid = true
+            //valid = true
         }
         return valid
     }

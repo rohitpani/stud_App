@@ -48,7 +48,7 @@ class login_with_OTP : AppCompatActivity() {
         else{
             mobile_no_error.visibility = View.GONE
             mobile_no_error.text = ""
-            valid = true
+            //valid = true
         }
         return valid
     }

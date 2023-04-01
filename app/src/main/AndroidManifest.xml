@@ -15,10 +15,10 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".No_Internet"
+            android:name=".activities.No_Internet"
             android:exported="false" />
         <activity
-            android:name=".approval_rejected"
+            android:name=".activities.approval_rejected"
             android:exported="false" />
         <activity
             android:name=".activities.brands_filter"

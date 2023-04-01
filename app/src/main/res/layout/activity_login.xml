@@ -6,264 +6,306 @@
     android:layout_height="match_parent"
     tools:context=".activities.login">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="31dp"
-            android:textSize="22dp"
-            android:fontFamily="@font/poppins_bold"
-            android:text="Login"
-            android:lineHeight="29dp"
-            android:layout_gravity="center"
-            android:textColor="#0F2851"
-            android:layout_marginTop="30dp"/>
-        
-        <ImageView
-            android:layout_width="122dp"
-            android:layout_height="2.55dp"
-            android:src="@drawable/dashed_line"
-            android:layout_gravity="center"
-            android:layout_marginTop="9dp"/>
-        
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="12dp">
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:textSize="22dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Login"
+                android:lineHeight="29dp"
+                android:layout_gravity="center"
+                android:textColor="#0F2851"
+                android:layout_marginTop="30dp"/>
+
+            <ImageView
+                android:layout_width="122dp"
+                android:layout_height="2.55dp"
+                android:src="@drawable/dashed_line"
+                android:layout_gravity="center"
+                android:layout_marginTop="9dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="27.61dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="19dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="21dp"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="Mobile Number"
-                        android:textSize="14dp"
-                        android:lineHeight="21dp"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:textColor="@color/light_black"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:orientation="horizontal"
-                    android:background="@drawable/views_bg">
+                android:layout_marginTop="12dp">
 
-                    <EditText
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="27.61dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="19dp">
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/login_mobile_no"
-                        android:background="#F9F7FF"
-                        android:drawableLeft="@drawable/phone"
-                        android:layout_gravity="center"
-                        android:paddingLeft="15dp"
-                        android:drawablePadding="7dp"
-                        android:textSize="14dp"
-                        android:inputType="phone"
-                        android:fontFamily="@font/poppins"
-                        android:hint="Enter your Mobile Number"/>
+                        android:layout_height="21dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Mobile Number"
+                            android:textSize="14dp"
+                            android:lineHeight="21dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/light_black"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/views_bg">
 
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/login_mobile_no"
+                            android:maxLength="10"
+                            android:background="#F9F7FF"
+                            android:drawableLeft="@drawable/phone"
+                            android:layout_gravity="center"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="10dp"
+                            android:drawablePadding="7dp"
+                            android:textSize="14dp"
+                            android:inputType="phone"
+                            android:fontFamily="@font/poppins"
+                            android:hint="Enter your Mobile Number"/>
 
-                    <TextView
+                    </LinearLayout>
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/mobile_no_error_login"
-                        android:background="@android:color/transparent"
-                        android:textColor="@color/red"
-                        android:layout_gravity="center"
-                        android:drawablePadding="7dp"
-                        android:textSize="10dp"
-                        android:visibility="gone"
-                        android:paddingLeft="5dp"
-                        android:layout_marginTop="4dp"
-                        android:fontFamily="@font/poppins"
-                        />
+                        android:layout_height="wrap_content">
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/mobile_no_error_login"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/red"
+                            android:layout_gravity="center"
+                            android:drawablePadding="7dp"
+                            android:textSize="10dp"
+                            android:visibility="gone"
+                            android:paddingLeft="5dp"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/poppins"
+                            />
+
+                    </LinearLayout>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="27.61dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="19dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="21dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Password"
+                            android:textSize="14dp"
+                            android:lineHeight="21dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/light_black"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/views_bg">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/login_Password"
+                                android:background="#F9F7FF"
+                                android:drawableLeft="@drawable/locked"
+                                android:layout_gravity="center"
+                                android:drawablePadding="7dp"
+                                android:layout_toStartOf="@+id/pswd_toggle_login"
+                                android:paddingLeft="15dp"
+                                android:textSize="14dp"
+                                android:hint="Enter Password"
+                                android:paddingRight="10dp"
+                                android:inputType="textPassword"
+                                android:fontFamily="@font/poppins" />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/pswd_toggle_login"
+                                android:layout_centerVertical="true"
+                                android:tag="1"
+                                android:visibility="gone"
+                                android:src="@drawable/view_off"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="10dp"/>
+
+
+                        </RelativeLayout>
+
+                        <!--                    <EditText-->
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:id="@+id/login_Password"-->
+                        <!--                        android:background="#F9F7FF"-->
+                        <!--                        android:drawableLeft="@drawable/locked"-->
+                        <!--                        android:layout_gravity="center"-->
+                        <!--                        android:paddingLeft="15dp"-->
+                        <!--                        android:drawablePadding="7dp"-->
+                        <!--                        android:textSize="14dp"-->
+                        <!--                        android:hint="Enter Password"-->
+                        <!--                        android:paddingRight="10dp"-->
+                        <!--                        android:fontFamily="@font/poppins"-->
+                        <!--                        android:drawableRight="@drawable/view_off" />-->
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/password_error_login"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/red"
+                            android:layout_gravity="center"
+                            android:drawablePadding="7dp"
+                            android:textSize="10dp"
+                            android:visibility="gone"
+                            android:paddingLeft="5dp"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/poppins"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
             </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:text="Forgot Password?"
+                android:id="@+id/forgot_password_tv"
+                android:textColor="#552FFF"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="12dp"
+                android:lineHeight="18dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="10dp"/>
+
+            <!--        <Button-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="47dp"-->
+            <!--            android:id="@+id/login_btn"-->
+            <!--            android:background="@drawable/button_bg"-->
+            <!--            android:drawableRight="@drawable/arrow_long_right"-->
+            <!--            android:fontFamily="@font/poppins_semibold"-->
+            <!--            android:text="Login"-->
+            <!--            android:layout_marginTop="25dp"-->
+            <!--            android:layout_marginLeft="20dp"-->
+            <!--            android:layout_marginRight="20dp"-->
+            <!--            android:textAllCaps="false" />-->
 
             <LinearLayout
+                android:id="@+id/login_btn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="27.61dp"
+                android:layout_height="47dp"
+                android:background="@drawable/button_bg"
+                android:layout_marginTop="25dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="19dp">
-                <LinearLayout
+                android:layout_marginRight="20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="21dp"
-                    android:orientation="horizontal">
+                    android:layout_height="match_parent">
+
                     <TextView
+                        android:id="@+id/lnout_btn_text"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="Password"
-                        android:textSize="14dp"
-                        android:lineHeight="21dp"
+                        android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_semibold"
-                        android:textColor="@color/light_black"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:orientation="horizontal"
-                    android:background="@drawable/views_bg">
+                        android:text="Login"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
 
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/login_Password"
-                        android:background="#F9F7FF"
-                        android:drawableLeft="@drawable/locked"
-                        android:layout_gravity="center"
-                        android:paddingLeft="15dp"
-                        android:drawablePadding="7dp"
-                        android:textSize="14dp"
-                        android:hint="Enter Password"
-                        android:paddingRight="15dp"
-                        android:fontFamily="@font/poppins"
-                        android:drawableRight="@drawable/view_off" />
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
+                    <ImageView
+                        android:id="@+id/forward_arrow"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/password_error_login"
-                        android:background="@android:color/transparent"
-                        android:textColor="@color/red"
-                        android:layout_gravity="center"
-                        android:drawablePadding="7dp"
-                        android:textSize="10dp"
-                        android:visibility="gone"
-                        android:paddingLeft="5dp"
-                        android:layout_marginTop="4dp"
-                        android:fontFamily="@font/poppins"
-                        />
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_long_right"
+                        android:layout_marginRight="24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
 
-        </LinearLayout>
-        
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="18dp"
-            android:text="Forgot Password?"
-            android:id="@+id/forgot_password_tv"
-            android:textColor="#552FFF"
-            android:fontFamily="@font/poppins_medium"
-            android:textSize="12dp"
-            android:lineHeight="18dp"
-            android:layout_gravity="right"
-            android:layout_marginRight="32dp"
-            android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:fontFamily="@font/noto_sans"
+                android:lineHeight="21dp"
+                android:text="Or"
+                android:textColor="#1D1617"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"/>
 
-<!--        <Button-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="47dp"-->
-<!--            android:id="@+id/login_btn"-->
-<!--            android:background="@drawable/button_bg"-->
-<!--            android:drawableRight="@drawable/arrow_long_right"-->
-<!--            android:fontFamily="@font/poppins_semibold"-->
-<!--            android:text="Login"-->
-<!--            android:layout_marginTop="25dp"-->
-<!--            android:layout_marginLeft="20dp"-->
-<!--            android:layout_marginRight="20dp"-->
-<!--            android:textAllCaps="false" />-->
-
-        <LinearLayout
-            android:id="@+id/login_btn"
-            android:layout_width="match_parent"
-            android:layout_height="47dp"
-            android:background="@drawable/button_bg"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/lnout_btn_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:text="Login"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.5" />
-
-                <ImageView
-                    android:id="@+id/forward_arrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/arrow_long_right"
-                    android:layout_marginRight="24dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
+                android:layout_height="47dp"
+                android:id="@+id/login_with_OTP"
+                android:background="@drawable/border_bg_blue"
+                android:fontFamily="@font/poppins_semibold"
+                android:stateListAnimator="@null"
+                android:textColor="#552FFF"
+                android:text="Login with OTP"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAllCaps="false" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="21dp"
-            android:fontFamily="@font/noto_sans"
-            android:lineHeight="21dp"
-            android:text="Or"
-            android:textColor="#1D1617"
-            android:textSize="14dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"/>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="match_parent"
-            android:layout_height="47dp"
-            android:id="@+id/login_with_OTP"
-            android:background="@drawable/border_bg_blue"
-            android:fontFamily="@font/poppins_semibold"
-            android:stateListAnimator="@null"
-            android:textColor="#552FFF"
-            android:text="Login with OTP"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:textAllCaps="false" />
-    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

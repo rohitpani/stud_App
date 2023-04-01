@@ -58,7 +58,7 @@ class verification : AppCompatActivity() {
                 }
             }
             else{
-                Toast.makeText(this,"Please enter Proper OTP",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Please enter OTP",Toast.LENGTH_SHORT).show()
             }
         }
 

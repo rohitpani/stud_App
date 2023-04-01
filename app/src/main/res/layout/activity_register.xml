@@ -81,6 +81,7 @@
                     android:layout_gravity="center"
                     android:drawablePadding="7dp"
                     android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
                     android:textSize="14dp"
                     android:hint="Enter your name"
                     android:fontFamily="@font/poppins"
@@ -146,11 +147,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/user_mobile_no"
+                        android:maxLength="10"
                         android:background="#F9F7FF"
                         android:drawableLeft="@drawable/phone"
                         android:layout_gravity="center"
                         android:drawablePadding="7dp"
                         android:paddingLeft="15dp"
+                        android:paddingRight="10dp"
                         android:textSize="14dp"
                         android:inputType="phone"
                         android:fontFamily="@font/poppins"
@@ -223,6 +226,7 @@
                         android:layout_gravity="center"
                         android:drawablePadding="7dp"
                         android:paddingLeft="15dp"
+                        android:paddingRight="10dp"
                         android:textSize="14dp"
                         android:inputType="textEmailAddress"
                         android:fontFamily="@font/poppins"
@@ -285,21 +289,39 @@
                     android:orientation="horizontal"
                     android:background="@drawable/views_bg">
 
-                    <EditText
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/user_password"
-                        android:background="#F9F7FF"
-                        android:drawableLeft="@drawable/locked"
-                        android:layout_gravity="center"
-                        android:drawablePadding="7dp"
-                        android:paddingLeft="15dp"
-                        android:textSize="14dp"
-                        android:hint="Enter Password"
-                        android:paddingRight="15dp"
-                        android:inputType="textPassword"
-                        android:fontFamily="@font/poppins"
-                        android:drawableRight="@drawable/view_off" />
+                        android:layout_gravity="center_vertical">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/user_password"
+                            android:background="#F9F7FF"
+                            android:drawableLeft="@drawable/locked"
+                            android:layout_gravity="center"
+                            android:drawablePadding="7dp"
+                            android:layout_toStartOf="@+id/pswd_toggle_register"
+                            android:paddingLeft="15dp"
+                            android:textSize="14dp"
+                            android:hint="Enter Password"
+                            android:paddingRight="10dp"
+                            android:inputType="textPassword"
+                            android:fontFamily="@font/poppins" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/pswd_toggle_register"
+                            android:layout_centerVertical="true"
+                            android:tag="1"
+                            android:visibility="gone"
+                            android:src="@drawable/view_off"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"/>
+
+
+                    </RelativeLayout>
 
                 </LinearLayout>
                 <LinearLayout
@@ -401,6 +423,7 @@
                                 android:lineHeight="21dp"
                                 android:textColor="#898989"
                                 android:textSize="14dp"
+                                android:singleLine="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHorizontal_bias="0.34"
@@ -459,6 +482,7 @@
                                 android:lineHeight="21dp"
                                 android:textColor="#898989"
                                 android:textSize="14dp"
+                                android:singleLine="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHorizontal_bias="0.34"
@@ -489,14 +513,17 @@
                     android:id="@+id/chkbox"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
-                    android:checked="true"
-                    android:buttonTint="#585CE5"/>
+                    android:button="@drawable/register_check_box"
+                    app:useMaterialThemeColors="false"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:text="@string/condition"
                     android:textSize="12dp"
                     android:lineHeight="18dp"
+                    android:id="@+id/privy_policy_terms_conditions"
+                    android:layout_marginLeft="12dp"
                     android:textColor="#5A5A5A"
+                    android:textColorLink="#5A5A5A"
                     android:fontFamily="@font/poppins_semibold"
                     android:layout_height="36dp"/>
             </LinearLayout>
@@ -527,32 +554,39 @@
                     android:layout_marginLeft="2dp"
                     android:layout_marginRight="2dp">
 
-                    <RelativeLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center">
+                        android:layout_height="match_parent">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
                             android:id="@+id/lnout_btn_text"
-                            android:fontFamily="@font/poppins_semibold"
-                            android:text="Sign Up"
-                            android:textAllCaps="false"
-                            android:textSize="16dp"
-                            android:gravity="center"
-                            android:textColor="@color/white"
-                            android:layout_centerInParent="true"/>
-
-                        <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/move_forward_arrow"
-                            android:layout_toEndOf="@+id/lnout_btn_text"
-                            android:layout_centerVertical="true"
-                            android:layout_marginLeft="10dp"/>
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Sign Up"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.5" />
 
-                    </RelativeLayout>
+                        <ImageView
+                            android:id="@+id/forward_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/arrow_long_right"
+                            android:layout_marginRight="24dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
 

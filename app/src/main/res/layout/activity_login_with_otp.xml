@@ -75,6 +75,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/mobile_no_login_with_OTP"
+                    android:maxLength="10"
+                    android:autofillHints="false"
                     android:background="#F9F7FF"
                     android:drawableLeft="@drawable/phone"
                     android:layout_gravity="center"
@@ -82,6 +84,7 @@
                     android:drawablePadding="7dp"
                     android:textSize="14dp"
                     android:inputType="phone"
+                    android:paddingRight="10dp"
                     android:fontFamily="@font/poppins"
                     android:hint="Enter your Mobile Number"/>
 
