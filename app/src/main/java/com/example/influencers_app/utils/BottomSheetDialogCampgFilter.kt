@@ -12,6 +12,7 @@ import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.influencers_app.R
@@ -42,6 +43,7 @@ class BottomSheetDialogCampgFilter: BottomSheetDialogFragment() {
     lateinit var youtube_chckd_status:TextView
     lateinit var start_range:TextView
     lateinit var end_range:TextView
+    lateinit var clear_btn:TextView
     lateinit var age_range_slider:RangeSlider
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -60,6 +62,7 @@ class BottomSheetDialogCampgFilter: BottomSheetDialogFragment() {
         start_range = v.findViewById(R.id.start_range)
         end_range = v.findViewById(R.id.end_range)
         age_range_slider = v.findViewById(R.id.age_seek)
+        clear_btn = v.findViewById(R.id.clearAll_btn_Filter)
 
         cancel.setOnClickListener {
             dismiss()
@@ -173,6 +176,44 @@ class BottomSheetDialogCampgFilter: BottomSheetDialogFragment() {
                 //textView.setText("Start value: ${values[0]}, End value: ${values[1]}")
             }
         })
+
+        clear_btn.setOnClickListener {
+//            Toast.makeText(activity,"Inside clear button",Toast.LENGTH_SHORT).show()
+            val filter_adapter = filter_lout_adapter(campg_types_list)
+            val filter_lout = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL,false)
+            campg_type_recv.layoutManager = filter_lout
+            campg_type_recv.adapter = filter_adapter
+
+            insta_lnout.background = resources.getDrawable(R.drawable.social_media_bg)
+            youtube_lnout.background = resources.getDrawable(R.drawable.social_media_bg)
+
+            val pricing_adapter = filter_lout_adapter(pricing_types_list)
+            val pricing_lout = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL,false)
+            pricing_type_recv.layoutManager = pricing_lout
+            pricing_type_recv.adapter = pricing_adapter
+
+            val brands_adapter = filter_brands_adapter(brands_list)
+            val brands_lout = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL,false)
+            brands_recv.layoutManager = brands_lout
+            brands_recv.adapter = brands_adapter
+
+            val interests_adapter = filter_lout_adapter(interests_list)
+            val interests_lout = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL,false)
+            interests_recv.layoutManager = interests_lout
+            interests_recv.adapter = interests_adapter
+
+            val language_adapter = filter_lout_adapter(language_list)
+            val language_lout = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL,false)
+            language_recv.layoutManager = language_lout
+            language_recv.adapter = language_adapter
+
+            start_range.text = "21"
+            end_range.text = "50"
+
+            age_range_slider.setValues(21f,50f)
+
+        }
+
         return v
     }
 

@@ -69,6 +69,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="fitXY"
+                            android:id="@+id/ref_img1"
                             android:src="@drawable/ref_img1"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -115,6 +116,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:src="@drawable/ref_img2"
+                            android:id="@+id/ref_img2"
                             android:scaleType="fitXY"/>
                     </androidx.cardview.widget.CardView>
 
@@ -131,6 +133,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:src="@drawable/ref_img3"
+                            android:id="@+id/ref_img3"
                             android:scaleType="fitXY"/>
                     </androidx.cardview.widget.CardView>
 
@@ -154,6 +157,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:src="@drawable/ref_img4"
+                            android:id="@+id/ref_img4"
                             android:scaleType="fitXY"/>
                     </androidx.cardview.widget.CardView>
 
@@ -168,6 +172,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:src="@drawable/ref_img5"
+                            android:id="@+id/ref_img5"
                             android:scaleType="fitXY"/>
                     </androidx.cardview.widget.CardView>
 
